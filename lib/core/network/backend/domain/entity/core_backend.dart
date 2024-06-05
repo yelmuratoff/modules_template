@@ -1,3 +1,8 @@
+import '../../../../../bootstrap.dart';
+import 'package:talker/talker.dart';
+import 'package:talker_dio_logger/talker_dio_logger_interceptor.dart';
+import 'package:talker_dio_logger/talker_dio_logger_settings.dart';
+
 import '../../../../../environment.dart';
 import '../interface/backend_base.dart';
 import '../../../gateway/domain/entity/core_gateway.dart';
@@ -23,6 +28,14 @@ class CoreBackend extends BackendBase {
           },
           interceptors: [
             AuthInterceptor(authVo: () => authVo),
+            TalkerDioLogger(
+              talker: talker,
+              settings: TalkerDioLoggerSettings(
+                printRequestHeaders: true,
+                printResponseHeaders: true,
+                errorPen: AnsiPen()..red(bold: true),
+              ),
+            ),
           ],
         ),
       EnvType.dev => CoreGateway(
@@ -35,6 +48,14 @@ class CoreBackend extends BackendBase {
           },
           interceptors: [
             AuthInterceptor(authVo: () => authVo),
+            TalkerDioLogger(
+              talker: talker,
+              settings: TalkerDioLoggerSettings(
+                printRequestHeaders: true,
+                printResponseHeaders: true,
+                errorPen: AnsiPen()..red(bold: true),
+              ),
+            ),
           ],
         ),
     };
