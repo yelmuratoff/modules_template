@@ -1989,6 +1989,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Рецепты`
+  String get receipes {
+    return Intl.message(
+      'Рецепты',
+      name: 'receipes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Продукты`
+  String get products {
+    return Intl.message(
+      'Продукты',
+      name: 'products',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Цитаты`
+  String get quotes {
+    return Intl.message(
+      'Цитаты',
+      name: 'quotes',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

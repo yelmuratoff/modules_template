@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../_shared/widgets/app_bar/app_app_bar.dart';
+import '../../../../../core/l10n/l10n_helper.dart';
 import 'widgets/product_tile.dart';
 import 'widgets/products_builder.dart';
 
@@ -10,9 +11,9 @@ class ProductsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppAppBar(
+      appBar: AppAppBar(
         canPop: false,
-        title: 'Products List',
+        title: context.s.products,
       ),
       body: ProductsBuilder(
         builder: (data) {

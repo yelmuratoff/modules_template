@@ -28,7 +28,7 @@ class NavBar extends StatelessWidget {
         ),
         NavBarItem(
           icon: Assets.two.icons.screen2,
-          label: 'Screen 2',
+          label: context.s.quotes,
           selectedColor: context.color.accent,
         ),
         NavBarItem(

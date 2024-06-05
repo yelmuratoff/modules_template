@@ -256,6 +256,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pincodeAuth": MessageLookupByLibrary.simpleMessage(
             "Жылдам қол жеткізу коды бойынша кіру"),
         "pincodeErrorTimeout": m2,
+        "products": MessageLookupByLibrary.simpleMessage("Продукты"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "pushNotifications":
             MessageLookupByLibrary.simpleMessage("Push - хабарлама"),
@@ -265,6 +266,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Хабарландыруларды өшіру мүмкін болмады"),
         "pushNotifsErrorCantSwitchOn": MessageLookupByLibrary.simpleMessage(
             "Хабарландыруларды қосу мүмкін болмады"),
+        "quotes": MessageLookupByLibrary.simpleMessage("Дәйексөздер"),
+        "receipes": MessageLookupByLibrary.simpleMessage("Рецепты"),
         "recoverPassword":
             MessageLookupByLibrary.simpleMessage("Құпия сөзді қалпына келдіру"),
         "removeAccount": MessageLookupByLibrary.simpleMessage("Аккаунтты жою"),

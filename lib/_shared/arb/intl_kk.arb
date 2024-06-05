@@ -197,5 +197,8 @@
 	"version": "Нұсқасы",
 	"yes": "Иә",
 	"youGetNewNotification": "Сіз жаңа хабарлама алдыңыз!",
-	"@_TWO": {}
+   "receipes": "Рецепты",
+   "products": "Продукты",
+	"@_TWO": {},
+   "quotes": "Дәйексөздер"
 }

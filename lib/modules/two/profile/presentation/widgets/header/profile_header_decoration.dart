@@ -39,11 +39,10 @@ class ProfileHeaderDecoration extends StatelessWidget {
                         begin: Alignment.bottomCenter,
                         end: Alignment.topCenter,
                         colors: [
-                          context.color.grey900,
-                          context.color.accent,
+                          context.color.accentBg,
                           context.color.accent,
                         ],
-                        stops: const [0.4, 0.9, 1.0],
+                        stops: const [0.4, 0.9],
                       ),
                     ),
                   ),
@@ -55,7 +54,7 @@ class ProfileHeaderDecoration extends StatelessWidget {
                         return CustomPaint(
                           foregroundPainter: const ArcBorderPainter(),
                           painter: ArcShadowPainter(
-                            color: context.color.textPrimary.withOpacity(0.4),
+                            color: context.color.textPrimary.withOpacity(0.1),
                             elevation: 5,
                           ),
                           child: DecoratedBox(
@@ -102,7 +101,8 @@ class ProfileHeaderDecoration extends StatelessWidget {
                             width: w * 0.15,
                             height: w * 0.15,
                             imageUrl: image ?? '',
-                            placeholder: (_, __) => const AppProgressIndicator(widthFactor: 0.5),
+                            placeholder: (_, __) =>
+                                const AppProgressIndicator(widthFactor: 0.5),
                             errorWidget: (_, url, error) {
                               return Assets.two.icons.userCircle.svg(
                                 fit: BoxFit.cover,

@@ -197,5 +197,8 @@
 	"version": "Версия ",
 	"yes": "Да",
 	"youGetNewNotification": "Вы получили новое уведомление!",
-	"@_TWO": {}
+   "receipes": "Рецепты",
+   "products": "Продукты",
+	"@_TWO": {},
+   "quotes": "Цитаты"
 }

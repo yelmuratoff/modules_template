@@ -43,9 +43,6 @@ class ThemeEntity extends Bloc<EventTheme, ITheme> {
   ) async {
     final theme = _themeFromID(event.themeID);
     if (theme == null) return;
-    SystemChrome.setSystemUIOverlayStyle(
-      theme.data.appBarTheme.systemOverlayStyle!,
-    );
     emit(theme);
     local.write(
       StorageVo(

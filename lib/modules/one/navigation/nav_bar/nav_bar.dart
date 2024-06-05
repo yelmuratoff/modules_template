@@ -23,17 +23,17 @@ class NavBar extends StatelessWidget {
       destinations: [
         NavBarItem(
           icon: Assets.one.icons.home,
-          label: 'Home',
+          label: context.s.main,
           selectedColor: context.color.accent,
         ),
         NavBarItem(
           icon: Assets.one.icons.screen2,
-          label: 'Screen 2',
+          label: context.s.receipes,
           selectedColor: context.color.accent,
         ),
         NavBarItem(
           icon: Assets.one.icons.screen3,
-          label: 'Screen 3',
+          label: context.s.products,
           selectedColor: context.color.accent,
         ),
         NavBarItem(

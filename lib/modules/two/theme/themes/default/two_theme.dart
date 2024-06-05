@@ -40,16 +40,6 @@ class TwoTheme implements ITheme {
       color: _color.accent,
       linearMinHeight: 2,
     ),
-    appBarTheme: AppBarTheme(
-      systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor: _color.background,
-        systemNavigationBarIconBrightness: Brightness.dark,
-        statusBarBrightness: Brightness.light,
-        systemNavigationBarContrastEnforced: false,
-      ),
-    ),
     extensions: <ThemeExtension>[
       _color,
       _text,

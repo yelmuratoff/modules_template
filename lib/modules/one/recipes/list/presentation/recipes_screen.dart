@@ -13,9 +13,9 @@ class RecipesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppAppBar(
+      appBar: AppAppBar(
         canPop: false,
-        title: 'Recipes List',
+        title: context.s.receipes,
       ),
       body: RecipesBuilder(
         builder: (data) {
@@ -35,8 +35,10 @@ class RecipesScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Difficulty: ${item.difficulty ?? context.s.noData}'),
-                    Text('Calories: ${item.caloriesPerServing ?? context.s.noData}'),
-                    Text('Cook time: ${item.cookTimeMinutes ?? context.s.noData}'),
+                    Text(
+                        'Calories: ${item.caloriesPerServing ?? context.s.noData}'),
+                    Text(
+                        'Cook time: ${item.cookTimeMinutes ?? context.s.noData}'),
                   ],
                 ),
                 onTap: () {

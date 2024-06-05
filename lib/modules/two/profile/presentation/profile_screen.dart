@@ -17,11 +17,16 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      top: false,
       child: Scaffold(
         body: AuthBuilder(
           builder: (isAuthorized, authError) {
             return UserBuilder(
-              builder: ({required bool isLoading, User? user, Object? userError}) {
+              builder: ({
+                required bool isLoading,
+                User? user,
+                Object? userError,
+              }) {
                 return Semantics(
                   explicitChildNodes: true,
                   enabled: true,

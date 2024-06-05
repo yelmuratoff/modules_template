@@ -17,57 +17,51 @@ class TwoRootScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion(
-      value: context.theme.appBarTheme.systemOverlayStyle!,
-      child: BlocProvider<RootScreenController>(
-        create: (_) => RootScreenController(initial: 0),
-        child: BlocBuilder<RootScreenController, PrimaryTabsState>(
-          builder: (context, state) {
-            final controller = context.read<RootScreenController>();
-            final currentIndex = state.index;
-            return BlocBuilder(
-              bloc: appDi.core.get<LocaleEntity>(),
-              builder: (context, _) {
-                return ColoredBox(
-                  color: context.color.accent,
-                  child: SafeArea(
-                    bottom: false,
-                    child: Scaffold(
-                      body: IndexedStack(
-                        key: UniqueKey(),
-                        index: currentIndex,
-                        children: <Widget>[
-                          Navigator(
-                            key: controller.navigatorKeys[0],
-                            onGenerateRoute: (_) => NavigatorHelper.adaptiveRoute(
-                              const HomeScreen(),
-                            ),
-                          ),
-                          Navigator(
-                            key: controller.navigatorKeys[1],
-                            onGenerateRoute: (_) => NavigatorHelper.adaptiveRoute(
-                              const QuotesScreen(),
-                            ),
-                          ),
-                          Navigator(
-                            key: controller.navigatorKeys[2],
-                            onGenerateRoute: (_) => NavigatorHelper.adaptiveRoute(
-                              const ProfileScreen(),
-                            ),
-                          ),
-                        ],
+    return BlocProvider<RootScreenController>(
+      create: (_) => RootScreenController(initial: 0),
+      child: BlocBuilder<RootScreenController, PrimaryTabsState>(
+        builder: (context, state) {
+          final controller = context.read<RootScreenController>();
+          final currentIndex = state.index;
+          return BlocBuilder(
+            bloc: appDi.core.get<LocaleEntity>(),
+            builder: (context, _) {
+              return ColoredBox(
+                color: context.color.accent,
+                child: Scaffold(
+                  body: IndexedStack(
+                    key: UniqueKey(),
+                    index: currentIndex,
+                    children: <Widget>[
+                      Navigator(
+                        key: controller.navigatorKeys[0],
+                        onGenerateRoute: (_) => NavigatorHelper.adaptiveRoute(
+                          const HomeScreen(),
+                        ),
                       ),
-                      bottomNavigationBar: NavBar(
-                        current: currentIndex,
-                        switchTo: controller.switchToTab,
+                      Navigator(
+                        key: controller.navigatorKeys[1],
+                        onGenerateRoute: (_) => NavigatorHelper.adaptiveRoute(
+                          const QuotesScreen(),
+                        ),
                       ),
-                    ),
+                      Navigator(
+                        key: controller.navigatorKeys[2],
+                        onGenerateRoute: (_) => NavigatorHelper.adaptiveRoute(
+                          const ProfileScreen(),
+                        ),
+                      ),
+                    ],
                   ),
-                );
-              },
-            );
-          },
-        ),
+                  bottomNavigationBar: NavBar(
+                    current: currentIndex,
+                    switchTo: controller.switchToTab,
+                  ),
+                ),
+              );
+            },
+          );
+        },
       ),
     );
   }

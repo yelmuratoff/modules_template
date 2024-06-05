@@ -35,43 +35,35 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion(
-      value: const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        statusBarBrightness: Brightness.light,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarIconBrightness: Brightness.dark,
-      ),
-      child: Material(
-        child: ColoredBox(
-          color: context.theme.color.background,
-          child: BlocConsumer<RemoteAuthEntity, RemoteAuthState>(
-            bloc: appDi.core.get<RemoteAuthEntity>(),
-            builder: (context, state) {
-              if (state is RemoteAuthError) {
-                return AppErrorWidget(
-                  error: state.error,
-                  onRetry: () {
-                    appDi.core.get<RemoteAuthEntity>().init();
-                  },
-                );
-              }
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  FlutterLogo(
-                    style: FlutterLogoStyle.stacked,
-                    textColor: context.color.accent,
-                    size: MediaQuery.of(context).size.width * 0.4,
-                  ),
-                  const AppProgressIndicator(),
-                ],
+    return Material(
+      child: ColoredBox(
+        color: context.theme.color.background,
+        child: BlocConsumer<RemoteAuthEntity, RemoteAuthState>(
+          bloc: appDi.core.get<RemoteAuthEntity>(),
+          builder: (context, state) {
+            if (state is RemoteAuthError) {
+              return AppErrorWidget(
+                error: state.error,
+                onRetry: () {
+                  appDi.core.get<RemoteAuthEntity>().init();
+                },
               );
-            },
-            listener: (context, state) {
-              controller?.checkState(state);
-            },
-          ),
+            }
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                FlutterLogo(
+                  style: FlutterLogoStyle.stacked,
+                  textColor: context.color.accent,
+                  size: MediaQuery.of(context).size.width * 0.4,
+                ),
+                const AppProgressIndicator(),
+              ],
+            );
+          },
+          listener: (context, state) {
+            controller?.checkState(state);
+          },
         ),
       ),
     );

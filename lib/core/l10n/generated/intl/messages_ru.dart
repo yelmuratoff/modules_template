@@ -257,6 +257,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pincodeAuth": MessageLookupByLibrary.simpleMessage(
             "Вход по коду быстрого доступа"),
         "pincodeErrorTimeout": m2,
+        "products": MessageLookupByLibrary.simpleMessage("Продукты"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "pushNotifications":
             MessageLookupByLibrary.simpleMessage("Push - уведомления"),
@@ -266,6 +267,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Не удалось отключить уведомления"),
         "pushNotifsErrorCantSwitchOn": MessageLookupByLibrary.simpleMessage(
             "Не удалось включить уведомления"),
+        "quotes": MessageLookupByLibrary.simpleMessage("Цитаты"),
+        "receipes": MessageLookupByLibrary.simpleMessage("Рецепты"),
         "recoverPassword":
             MessageLookupByLibrary.simpleMessage("Восстановить пароль"),
         "removeAccount":

@@ -17,7 +17,6 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.child,
     this.backgroundColor,
     this.centerTitle = true,
-    this.systemOverlayStyle,
     this.titleStyle,
   });
 
@@ -29,7 +28,6 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height;
   final Widget? leading;
   final EdgeInsetsGeometry? padding;
-  final SystemUiOverlayStyle? systemOverlayStyle;
   final String? title;
   final Widget? child;
   final TextStyle? titleStyle;
@@ -78,7 +76,6 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
                   height: 40,
                 ),
               ],
-        systemOverlayStyle: systemOverlayStyle,
       ),
     );
   }

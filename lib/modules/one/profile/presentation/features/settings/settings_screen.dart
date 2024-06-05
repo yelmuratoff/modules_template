@@ -110,13 +110,6 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(height: 32),
                   const SettingsLocalAuthWidget(),
                   const SizedBox(height: 32),
-                  Text(
-                    context.s.notifications,
-                    style: context.text.s12w700.copyWith(
-                      color: context.color.accent,
-                    ),
-                  ),
-                  const AppDivider(),
                 ],
               ),
             );

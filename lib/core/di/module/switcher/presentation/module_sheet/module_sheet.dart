@@ -9,7 +9,9 @@ import '../../../../../theme/domain/interface/i_theme.dart';
 Future<void> showModuleSheet(BuildContext context) {
   return showModalBottomSheet<void>(
     context: context,
+
     isScrollControlled: true,
+    // useRootNavigator: true,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
         topRight: Radius.circular(12),
@@ -69,7 +71,8 @@ class _Item extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: module == current ? context.color.accent.withOpacity(0.1) : null,
+          color:
+              module == current ? context.color.accent.withOpacity(0.1) : null,
         ),
         child: icon,
       ),

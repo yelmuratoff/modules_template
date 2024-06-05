@@ -12,9 +12,9 @@ class QuotesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppAppBar(
+      appBar: AppAppBar(
         canPop: false,
-        title: 'Quotes',
+        title: context.s.quotes,
       ),
       body: QuotesBuilder(
         builder: (state) {

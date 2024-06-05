@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
@@ -41,55 +40,46 @@ class _SignOutScreenState extends State<SignOutScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion(
-      value: SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        statusBarBrightness: Brightness.light,
-        statusBarIconBrightness: Brightness.light,
-        systemNavigationBarColor: context.theme.color.background,
-        systemNavigationBarIconBrightness: Brightness.dark,
-      ),
-      child: PopScope(
-        canPop: false,
-        child: Scaffold(
-          body: BlocConsumer<SignOutEntity, SignOutState>(
-            bloc: appDi.core.get(),
-            builder: (context, state) {
-              return switch (state) {
-                SignOutIdle(error: final Object e) => AppErrorWidget(
-                    message: context.s.error,
-                    subMessage: e.toErrorMessage(),
-                    onRetry: () {
-                      appDi.core.get<SignOutEntity>().add(
-                            RequestSignOut(),
-                          );
-                    },
-                  ),
-                _ => Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        context.s.exitFromAccount,
-                        style: context.text.s16w700,
-                      ),
-                      const SizedBox(height: 40),
-                      const AppProgressIndicator(),
-                    ],
-                  ),
-              };
-            },
-            listener: (context, state) async {
-              if (state is SignOutIdle && state.signOutSuccess == true) {
-                if (widget.authVo != null) {
-                  await appDi.core.get<RemoteAuthEntity>().updateAuthVo(
-                        widget.authVo!,
-                        forceReload: true,
-                      );
-                }
-                appDi.core.get<ModuleEntity>().reload();
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+        body: BlocConsumer<SignOutEntity, SignOutState>(
+          bloc: appDi.core.get(),
+          builder: (context, state) {
+            return switch (state) {
+              SignOutIdle(error: final Object e) => AppErrorWidget(
+                  message: context.s.error,
+                  subMessage: e.toErrorMessage(),
+                  onRetry: () {
+                    appDi.core.get<SignOutEntity>().add(
+                          RequestSignOut(),
+                        );
+                  },
+                ),
+              _ => Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      context.s.exitFromAccount,
+                      style: context.text.s16w700,
+                    ),
+                    const SizedBox(height: 40),
+                    const AppProgressIndicator(),
+                  ],
+                ),
+            };
+          },
+          listener: (context, state) async {
+            if (state is SignOutIdle && state.signOutSuccess == true) {
+              if (widget.authVo != null) {
+                await appDi.core.get<RemoteAuthEntity>().updateAuthVo(
+                      widget.authVo!,
+                      forceReload: true,
+                    );
               }
-            },
-          ),
+              appDi.core.get<ModuleEntity>().reload();
+            }
+          },
         ),
       ),
     );

@@ -8,15 +8,14 @@ class MainHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Expanded(
           flex: 29,
-          child: Container(
+          child: Align(
             alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.only(left: 14),
-            child: const ModuleButton(
+            child: ModuleButton(
               module: AppModule.one,
             ),
           ),
