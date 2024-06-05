@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../core/_shared/utils/extensions/object_to_error.dart';
-import '../../../../../../_shared/widgets/app_error_widget.dart';
-import '../../../../../../_shared/widgets/banners/show_banner.dart';
-import '../../../../../../_shared/widgets/loader_overlay/app_progress_indicator.dart';
-import '../../../../../../di.dart';
-import '../../../../../../_shared/widgets/pagination/app_paginator.dart';
+import '../../../../../../shared/utils/extensions/object_to_error.dart';
+import '../../../../../../shared/presentation/widgets/app_error_widget.dart';
+import '../../../../../../shared/presentation/widgets/banners/show_banner.dart';
+import '../../../../../../shared/presentation/widgets/loader_overlay/app_progress_indicator.dart';
+import '../../../../../../core/di/di.dart';
+import '../../../../../../shared/presentation/widgets/pagination/app_paginator.dart';
 import '../../domain/entity/products_entity.dart';
 
 class ProductsBuilder extends StatelessWidget {

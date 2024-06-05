@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../_shared/assets.gen.dart';
-import '../../../_shared/widgets/bottom_sheets/widgets/bottom_sheet_header.dart';
-import '../../../_shared/widgets/divider.dart';
-import '../../../_shared/widgets/knob.dart';
+import '../../../shared/assets.gen.dart';
+import '../../../shared/presentation/widgets/bottom_sheets/widgets/bottom_sheet_header.dart';
+import '../../../shared/presentation/widgets/divider.dart';
+import '../../../shared/presentation/widgets/knob.dart';
 import '../../theme/domain/interface/i_theme.dart';
 import '../domain/value_objects/env_type.dart';
 

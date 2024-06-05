@@ -9,7 +9,7 @@ import 'core/env/env.dart';
 import 'core/l10n/domain/value_objects/app_locale.dart';
 import 'core/di/module/switcher/domain/value_objects/app_module.dart';
 import 'core/env/domain/value_objects/env_type.dart';
-import 'environment.dart';
+import 'core/env/environment.dart';
 
 Future<void> main() async {
   Environment.setup(

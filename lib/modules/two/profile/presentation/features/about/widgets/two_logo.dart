@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../../_shared/assets.gen.dart';
+import '../../../../../../../shared/assets.gen.dart';
 import '../../../../../../../core/env/domain/value_objects/env_type.dart';
-import '../../../../../../../core/network/backend/presentation/backend_switcher.dart';
+import '../../../../../../../core/api/backend/presentation/backend_switcher.dart';
 import '../../../../../../../core/theme/domain/interface/i_theme.dart';
 
 class TwoLogo extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../core/l10n/l10n_helper.dart';
+import '../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
 import 'widgets/product_tile.dart';
 import 'widgets/products_builder.dart';
 
@@ -13,7 +13,7 @@ class ProductsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppAppBar(
         canPop: false,
-        title: context.s.products,
+        title: L10n.current.products,
       ),
       body: ProductsBuilder(
         builder: (data) {

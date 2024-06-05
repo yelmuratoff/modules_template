@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../../_shared/widgets/app_bar/leading_buttons/cancel_leading_button.dart';
-import '../../../../../../_shared/widgets/app_unfocuser.dart';
-import '../../../../../../_shared/widgets/utils/get_logo_path.dart';
-import '../../../../../../di.dart';
+import '../../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
+import '../../../../../../shared/presentation/widgets/app_bar/leading_buttons/cancel_leading_button.dart';
+import '../../../../../../shared/presentation/widgets/app_unfocuser.dart';
+import '../../../../../../shared/presentation/widgets/utils/get_logo_path.dart';
+import '../../../../../di/di.dart';
 import '../../../../../di/module/switcher/domain/entity/module_entity.dart';
-import '../../../../../l10n/l10n_helper.dart';
-import '../../../../../navigation/navigator1_helper.dart';
+import '../../../../../l10n/generated/l10n.dart';
+import '../../../../../router/navigator1_helper.dart';
 import '../../../../../theme/domain/interface/i_theme.dart';
 import '../../../sign_up/main/presentation/sign_up_screen.dart';
 import '../../email/presentation/email_tab.dart';
@@ -27,7 +27,7 @@ class SignInScreen extends StatelessWidget {
               TextButton(
                 style: context.button.text1,
                 child: Text(
-                  context.s.signup,
+                  L10n.current.signup,
                 ),
                 onPressed: () {
                   context.router.use.push(

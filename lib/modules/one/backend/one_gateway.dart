@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-import '../../../core/network/gateway/domain/interface/base_gateway.dart';
+import '../../../core/api/gateway/domain/interface/base_gateway.dart';
 
 final class OneGateway extends BaseGateway {
   factory OneGateway({

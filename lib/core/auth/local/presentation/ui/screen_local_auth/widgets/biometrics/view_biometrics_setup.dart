@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import '../../../../../../../l10n/generated/l10n.dart';
 
-import '../../../../../../../../_shared/assets.gen.dart';
-import '../../../../../../../l10n/l10n_helper.dart';
+import '../../../../../../../../shared/assets.gen.dart';
 import '../../../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../../domain/entity/extensions.dart';
 import '../../../../../domain/value_objects/biometrics_type.dart';
@@ -82,7 +82,7 @@ class ViewBiometricsSetup extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       style: context.button.elevated1,
-                      child: Text(context.s.tryAgain),
+                      child: Text(L10n.current.tryAgain),
                       onPressed: () {
                         context.read<LocalAuthController>().biometricsSetup(
                               state.dto,

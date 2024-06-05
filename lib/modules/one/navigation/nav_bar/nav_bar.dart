@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/l10n/l10n_helper.dart';
-import '../../../../_shared/assets.gen.dart';
-import '../../../../_shared/widgets/nav_bar_item.dart';
+import '../../../../core/l10n/generated/l10n.dart';
+import '../../../../shared/assets.gen.dart';
+import '../../../../shared/presentation/widgets/nav_bar_item.dart';
 import '../../../../core/theme/domain/interface/i_theme.dart';
 import '../../auth/one_auth.dart';
 
@@ -23,22 +23,22 @@ class NavBar extends StatelessWidget {
       destinations: [
         NavBarItem(
           icon: Assets.one.icons.home,
-          label: context.s.main,
+          label: L10n.current.main,
           selectedColor: context.color.accent,
         ),
         NavBarItem(
           icon: Assets.one.icons.screen2,
-          label: context.s.receipes,
+          label: L10n.current.receipes,
           selectedColor: context.color.accent,
         ),
         NavBarItem(
           icon: Assets.one.icons.screen3,
-          label: context.s.products,
+          label: L10n.current.products,
           selectedColor: context.color.accent,
         ),
         NavBarItem(
           icon: Assets.one.icons.profile,
-          label: context.s.profile,
+          label: L10n.current.profile,
           selectedColor: context.color.accent,
         ),
       ],

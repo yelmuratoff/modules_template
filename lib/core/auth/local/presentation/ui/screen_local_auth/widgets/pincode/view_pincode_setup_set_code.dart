@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../../../l10n/generated/l10n.dart';
-import '../../../../../../../l10n/l10n_helper.dart';
 import '../../../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../controller/local_auth_controller.dart';
 import '../../widgets/local_auth_view_app_bar.dart';
@@ -22,7 +21,7 @@ class ViewPincodeSetupSetCode extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     return BlocProvider(
       create: (context) => CubitViewPinCode(
-        timeoutErrorMessage: S.current.pincodeErrorTimeout,
+        timeoutErrorMessage: L10n.current.pincodeErrorTimeout,
       ),
       child: BlocListener<CubitViewPinCode, StateCubitViewPinCode>(
         child: Column(
@@ -52,7 +51,7 @@ class ViewPincodeSetupSetCode extends StatelessWidget {
                       height * 0.05,
                     ),
                     child: Text(
-                      context.s.setFastAccessCode,
+                      L10n.current.setFastAccessCode,
                       style: context.text.hs24w700,
                       textAlign: TextAlign.center,
                     ),

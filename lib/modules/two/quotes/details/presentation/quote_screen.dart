@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../core/l10n/l10n_helper.dart';
+import '../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
 import '../../../../../core/theme/domain/interface/i_theme.dart';
 import 'widgets/quote_builder.dart';
 
@@ -27,12 +27,12 @@ class QuoteScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             children: [
               Text(
-                item.quote ?? context.s.noData,
+                item.quote ?? L10n.current.noData,
                 style: context.text.s16w400,
               ),
               const SizedBox(height: 16),
               Text(
-                item.author ?? context.s.noData,
+                item.author ?? L10n.current.noData,
                 style: context.text.s16w700,
               ),
             ],

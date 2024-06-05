@@ -1,4 +1,4 @@
-import '../../../../network/gateway/domain/interface/i_gateway.dart';
+import '../../../../api/gateway/domain/interface/i_gateway.dart';
 import '../domain/interface/i_sign_out_repo.dart';
 
 class SignOutRepo implements ISignOutRepo {

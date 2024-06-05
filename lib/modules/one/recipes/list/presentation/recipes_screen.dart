@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../core/l10n/l10n_helper.dart';
-import '../../../../../core/navigation/navigator1_helper.dart';
+import '../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
+import '../../../../../core/router/navigator1_helper.dart';
 import '../../details/presentation/recipe_details_screen.dart';
 import 'widgets/recipes_builder.dart';
 
@@ -15,7 +15,7 @@ class RecipesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppAppBar(
         canPop: false,
-        title: context.s.receipes,
+        title: L10n.current.receipes,
       ),
       body: RecipesBuilder(
         builder: (data) {
@@ -30,16 +30,18 @@ class RecipesScreen extends StatelessWidget {
                   radius: 30,
                   backgroundImage: CachedNetworkImageProvider(item.image ?? ''),
                 ),
-                title: Text(item.name ?? context.s.noData),
+                title: Text(item.name ?? L10n.current.noData),
                 subtitle: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Difficulty: ${item.difficulty ?? context.s.noData}'),
                     Text(
-                      'Calories: ${item.caloriesPerServing ?? context.s.noData}',
+                      'Difficulty: ${item.difficulty ?? L10n.current.noData}',
                     ),
                     Text(
-                      'Cook time: ${item.cookTimeMinutes ?? context.s.noData}',
+                      'Calories: ${item.caloriesPerServing ?? L10n.current.noData}',
+                    ),
+                    Text(
+                      'Cook time: ${item.cookTimeMinutes ?? L10n.current.noData}',
                     ),
                   ],
                 ),

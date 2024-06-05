@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:ispect/ispect.dart';
 
-import '../../../../environment.dart';
-import '../../../_shared/utils/throw_if_needed.dart';
+import '../../../env/environment.dart';
+import '../../../../shared/utils/throw_if_needed.dart';
 import '../../../storage/general/domain/interface/i_local_storage_repo.dart';
 import '../../data/convert/app_locale_convert.dart';
 import '../../generated/l10n.dart';
@@ -52,7 +52,7 @@ class LocaleEntity extends Cubit<LocaleState> {
     try {
       final locale = _localeFromString(appLocale?.code);
       if (locale == null) return false;
-      await S.load(locale);
+      await L10n.load(locale);
       await local.write(appLocale!.toStorage());
       emit(
         LocaleState(appLocale),
@@ -70,7 +70,7 @@ class LocaleEntity extends Cubit<LocaleState> {
   }
 
   List<AppLocale> get supportedLocales {
-    return S.delegate.supportedLocales
+    return L10n.delegate.supportedLocales
         .map(
           AppLocaleConvert.fromLocale,
         )

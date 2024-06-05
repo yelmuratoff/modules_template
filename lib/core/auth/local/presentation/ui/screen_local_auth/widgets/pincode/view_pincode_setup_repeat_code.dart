@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../../../l10n/generated/l10n.dart';
-import '../../../../../../../l10n/l10n_helper.dart';
 import '../../../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../controller/local_auth_controller.dart';
 import '../../widgets/local_auth_view_app_bar.dart';
@@ -19,8 +18,8 @@ class ViewPincodeSetupRepeatCode extends StatelessWidget {
     return BlocProvider(
       create: (context) => CubitViewPinCode(
         pin: state.dto.pin,
-        errorMessage: S.current.pinDoesntMatch,
-        timeoutErrorMessage: S.current.pincodeErrorTimeout,
+        errorMessage: L10n.current.pinDoesntMatch,
+        timeoutErrorMessage: L10n.current.pincodeErrorTimeout,
       ),
       child: BlocListener<CubitViewPinCode, StateCubitViewPinCode>(
         child: Column(
@@ -44,7 +43,7 @@ class ViewPincodeSetupRepeatCode extends StatelessWidget {
               children: [
                 Flexible(
                   child: Text(
-                    context.s.enterPincodeAgain,
+                    L10n.current.enterPincodeAgain,
                     style: context.text.hs24w700,
                   ),
                 ),

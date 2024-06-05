@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import '../../../../../_shared/widgets/app_error_widget.dart';
-import '../../../../../_shared/widgets/loader_overlay/app_progress_indicator.dart';
-import '../../../../../di.dart';
-import '../../../../_shared/utils/extensions/object_to_error.dart';
-import '../../../../_shared/value_objects/auth_vo.dart';
+import '../../../../../shared/presentation/widgets/app_error_widget.dart';
+import '../../../../../shared/presentation/widgets/loader_overlay/app_progress_indicator.dart';
+import '../../../../di/di.dart';
+import '../../../../../shared/utils/extensions/object_to_error.dart';
+import '../../../../../shared/value_objects/auth_vo.dart';
 import '../../../../di/module/switcher/domain/entity/module_entity.dart';
-import '../../../../l10n/l10n_helper.dart';
+import '../../../../l10n/generated/l10n.dart';
 import '../../../../theme/domain/interface/i_theme.dart';
 import '../../_shared/domain/remote_auth_entity/remote_auth_entity.dart';
 import '../../_shared/domain/sign_out_entity/sign_out_entity.dart';
@@ -48,7 +48,7 @@ class _SignOutScreenState extends State<SignOutScreen> {
           builder: (context, state) {
             return switch (state) {
               SignOutIdle(error: final Object e) => AppErrorWidget(
-                  message: context.s.error,
+                  message: L10n.current.error,
                   subMessage: e.toErrorMessage(),
                   onRetry: () {
                     appDi.core.get<SignOutEntity>().add(
@@ -60,7 +60,7 @@ class _SignOutScreenState extends State<SignOutScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      context.s.exitFromAccount,
+                      L10n.current.exitFromAccount,
                       style: context.text.s16w700,
                     ),
                     const SizedBox(height: 40),

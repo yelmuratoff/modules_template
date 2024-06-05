@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/l10n/l10n_helper.dart';
+import '../../../../core/l10n/generated/l10n.dart';
 import '../../../../core/theme/domain/interface/i_theme.dart';
 import 'widgets/header.dart';
 
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: Center(
               child: Text(
-                context.s.main,
+                L10n.current.main,
                 style: context.text.s16w400,
               ),
             ),

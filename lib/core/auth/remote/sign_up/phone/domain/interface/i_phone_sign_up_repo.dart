@@ -1,7 +1,7 @@
-import '../../../../../../_shared/value_objects/auth_vo.dart';
+import '../../../../../../../shared/value_objects/auth_vo.dart';
 import '../../../../_shared/domain/value_objects/auth_response.dart';
 
-export '../../../../../../_shared/value_objects/auth_vo.dart';
+export '../../../../../../../shared/value_objects/auth_vo.dart';
 
 abstract class IPhoneSignUpRepo {
   Future<AuthResponse> signUp(String email, String password);

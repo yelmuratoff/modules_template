@@ -1,7 +1,7 @@
-import '../../../../../core/_shared/app_global_keys.dart';
+import '../../../../../shared/utils/app_global_keys.dart';
 import '../../../../../core/di/module/di/i_module_di.dart';
-import '../../../../../core/navigation/navigator1_helper.dart';
-import '../../../../../core/network/backend/domain/entity/interactor.dart';
+import '../../../../../core/router/navigator1_helper.dart';
+import '../../../../../core/api/backend/domain/entity/interactor.dart';
 import '../../../backend/one_backend.dart';
 
 abstract class BackendPart {

@@ -5,10 +5,10 @@ import 'package:talker_dio_logger/talker_dio_logger_settings.dart';
 
 import '../../../bootstrap.dart';
 import '../../../core/di/module/switcher/domain/value_objects/app_module.dart';
-import '../../../core/network/backend/domain/entity/interceptors/auth_interceptor.dart';
-import '../../../core/network/backend/domain/entity/interceptors/error_interceptor.dart';
-import '../../../core/network/backend/domain/interface/backend_base.dart';
-import '../../../environment.dart';
+import '../../../core/api/backend/domain/entity/interceptors/auth_interceptor.dart';
+import '../../../core/api/backend/domain/entity/interceptors/error_interceptor.dart';
+import '../../../core/api/backend/domain/interface/backend_base.dart';
+import '../../../core/env/environment.dart';
 import 'one_gateway.dart';
 
 class OneBackend extends BackendBase {

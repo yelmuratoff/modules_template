@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../../../../../../_shared/value_objects/auth_vo.dart';
+import '../../../../../../../shared/value_objects/auth_vo.dart';
 
 sealed class SignInState {}
 

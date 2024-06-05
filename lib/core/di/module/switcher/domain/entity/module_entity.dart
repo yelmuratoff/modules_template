@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../environment.dart';
+import '../../../../../env/environment.dart';
 import '../interface/i_module_repo.dart';
 import '../value_objects/app_module.dart';
 import 'states.dart';

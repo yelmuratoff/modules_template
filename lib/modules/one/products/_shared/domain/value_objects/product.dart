@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../../../../../../core/_shared/value_objects/file_box.dart';
+import '../../../../../../shared/value_objects/file_box.dart';
 
 class Product extends Equatable {
   const Product({
@@ -17,7 +17,7 @@ class Product extends Equatable {
   final String? brand;
   final String? category;
   final num id;
-  final List<ScFilebox>? images;
+  final List<Filebox>? images;
   final num? price;
   final num? stock;
   final String? thumbnail;

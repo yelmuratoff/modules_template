@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../_shared/assets.gen.dart';
+import '../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../shared/assets.gen.dart';
 import '../../../../../core/l10n/domain/entity/locale_entity.dart';
-import '../../../../../core/l10n/l10n_helper.dart';
 import '../../../../../core/l10n/presentation/language_bottom_sheet.dart';
 import '../../../../../core/l10n/presentation/utils/locale_name.dart';
-import '../../../../../core/navigation/navigator1_helper.dart';
+import '../../../../../core/router/navigator1_helper.dart';
 import '../../../../../core/theme/domain/entity/theme_entity.dart';
 import '../../../../../core/theme/domain/interface/i_theme.dart';
 import '../../../../../core/theme/presentation/theme_sheet.dart';
-import '../../../../../di.dart';
+import '../../../../../core/di/di.dart';
 import '../features/about/screen_about_app.dart';
 import '../features/settings/settings_screen.dart';
 import 'profile_tile.dart';
@@ -58,7 +58,7 @@ class ProfileBody extends StatelessWidget {
           ),
           ProfileTile(
             isFirst: true,
-            title: context.s.appTheme,
+            title: L10n.current.appTheme,
             icon: Assets.shared.icons.theme.svg(),
             onPressed: () async {
               final selected = await showThemeSheet(
@@ -73,7 +73,7 @@ class ProfileBody extends StatelessWidget {
           ),
           if (showSettings)
             ProfileTile(
-              title: context.s.settings,
+              title: L10n.current.settings,
               icon: Assets.shared.icons.settings.svg(),
               onPressed: () {
                 context.rootRouter.use.push(
@@ -83,7 +83,7 @@ class ProfileBody extends StatelessWidget {
             ),
           ProfileTile(
             isLast: true,
-            title: context.s.aboutApp,
+            title: L10n.current.aboutApp,
             icon: Assets.two.images.logo.image(),
             onPressed: () {
               context.rootRouter.use.push(

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../../../../../_shared/assets.gen.dart';
-import '../../../../../../../../../../_shared/widgets/sms_verification/widgets/keypad/keypad.dart';
-import '../../../../../../../../../../_shared/widgets/sms_verification/widgets/keypad/keypad_button.dart';
-import '../../../../../../../../../../di.dart';
-import '../../../../../../../../../l10n/l10n_helper.dart';
+import '../../../../../../../../../../shared/assets.gen.dart';
+import '../../../../../../../../../../shared/presentation/widgets/sms_verification/widgets/keypad/keypad.dart';
+import '../../../../../../../../../../shared/presentation/widgets/sms_verification/widgets/keypad/keypad_button.dart';
+import '../../../../../../../../../di/di.dart';
+import '../../../../../../../../../l10n/generated/l10n.dart';
 import '../../../../../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../../../../domain/entity/local_auth_entity.dart';
 import '../../../../../../controller/local_auth_controller.dart';
@@ -43,7 +43,7 @@ class PinPadWidget extends StatelessWidget {
                         child: TextButton(
                           style: context.button.text1,
                           child: Text(
-                            context.s.forgotPin,
+                            L10n.current.forgotPin,
                           ),
                           onPressed: () {
                             context

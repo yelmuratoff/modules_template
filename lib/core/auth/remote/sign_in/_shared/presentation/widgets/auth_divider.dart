@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../l10n/l10n_helper.dart';
+import '../../../../../../l10n/generated/l10n.dart';
 import '../../../../../../theme/domain/interface/i_theme.dart';
 
 class AuthDivider extends StatelessWidget {
@@ -21,7 +21,7 @@ class AuthDivider extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: Text(
-              context.s.or.toLowerCase(),
+              L10n.current.or.toLowerCase(),
               style: context.text.s12w700.copyWith(
                 color: context.color.grey900,
               ),

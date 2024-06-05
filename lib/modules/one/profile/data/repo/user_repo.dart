@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
-import '../../../../../core/_shared/exceptions/app_exception.dart';
-import '../../../../../core/network/gateway/domain/interface/i_gateway.dart';
+import '../../../../../shared/exceptions/app_exception.dart';
+import '../../../../../core/api/gateway/domain/interface/i_gateway.dart';
 import '../../domain/interface/i_user_repo.dart';
 import '../../domain/value_objects/user.dart';
 import '../convert/user_convert.dart';

@@ -1,5 +1,5 @@
-import '../../../../../../_shared/exceptions/app_exception.dart';
-import '../../../../../../network/gateway/domain/interface/i_gateway.dart';
+import '../../../../../../../shared/exceptions/app_exception.dart';
+import '../../../../../../api/gateway/domain/interface/i_gateway.dart';
 import '../../../../_shared/domain/value_objects/auth_response.dart';
 import '../domain/interface/i_phone_recovery_repo.dart';
 

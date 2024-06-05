@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:ispect/ispect.dart';
 
-import 'core/_shared/utils/extensions/talker.dart';
-import 'di.dart';
+import 'shared/utils/extensions/talker.dart';
+import 'core/di/di.dart';
 
 ///  It is used to handle errors and log messages in the app.
 final talker = TalkerFlutter.init();

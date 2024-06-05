@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:ispect/ispect.dart';
 
-import '../../../_shared/interface/i_disposable.dart';
+import '../../../../shared/interface/i_disposable.dart';
 import '../di/i_module_di.dart';
 
 ///Orchestrator is a class responsible for init/dispose enities

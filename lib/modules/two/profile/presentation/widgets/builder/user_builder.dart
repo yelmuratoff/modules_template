@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../_shared/widgets/banners/show_banner.dart';
+import '../../../../../../shared/presentation/widgets/banners/show_banner.dart';
 import '../../../../../../core/l10n/generated/l10n.dart';
-import '../../../../../../di.dart';
+import '../../../../../../core/di/di.dart';
 import '../../../domain/entity/user_entity.dart';
 import '../../../domain/value_objects/user.dart';
 
@@ -56,7 +56,7 @@ class UserBuilder extends StatelessWidget {
         if (state is UserDeleted) {
           ShowBanner.hide();
           ShowBanner.success(
-            message: state.message ?? S.of(context).accountIsDeleted,
+            message: state.message ?? L10n.of(context).accountIsDeleted,
             seconds: 3,
           );
         }

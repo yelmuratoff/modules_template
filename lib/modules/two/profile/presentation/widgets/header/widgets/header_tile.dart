@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../../../../../_shared/assets.gen.dart';
-import '../../../../../../../core/l10n/l10n_helper.dart';
+import '../../../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../../../shared/assets.gen.dart';
 import '../../../../../../../core/theme/domain/interface/i_theme.dart';
 
 class HeaderTile extends StatelessWidget {
@@ -44,13 +44,13 @@ class HeaderTile extends StatelessWidget {
                       baseColor: context.color.background,
                       highlightColor: context.color.grey900,
                       child: Text(
-                        context.s.noData,
+                        L10n.current.noData,
                         textAlign: TextAlign.end,
                         style: context.text.s14w400,
                       ),
                     )
                   : Text(
-                      value ?? context.s.noData,
+                      value ?? L10n.current.noData,
                       textAlign: TextAlign.end,
                       style: context.text.s14w400,
                       softWrap: false,

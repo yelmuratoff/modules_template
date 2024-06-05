@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../../../l10n/generated/l10n.dart';
-import '../../../../../../../l10n/l10n_helper.dart';
 import '../../../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../controller/local_auth_controller.dart';
 import '../../widgets/local_auth_view_app_bar.dart';
@@ -25,9 +24,9 @@ class ViewPincodeVerification extends StatelessWidget {
     return BlocProvider(
       create: (context) => CubitViewPinCode(
         pin: state.dto.pin!,
-        errorMessage: S.current.wrongCode,
+        errorMessage: L10n.current.wrongCode,
         timeout: state.dto.timeout,
-        timeoutErrorMessage: S.current.pincodeErrorTimeout,
+        timeoutErrorMessage: L10n.current.pincodeErrorTimeout,
       ),
       child: BlocListener<CubitViewPinCode, StateCubitViewPinCode>(
         child: Column(
@@ -46,7 +45,7 @@ class ViewPincodeVerification extends StatelessWidget {
               children: [
                 Flexible(
                   child: Text(
-                    context.s.enterFastAccessCode,
+                    L10n.current.enterFastAccessCode,
                     style: context.text.s14w400.copyWith(
                       color: context.color.grey900,
                     ),

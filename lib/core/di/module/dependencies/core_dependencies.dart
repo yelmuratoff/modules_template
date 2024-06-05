@@ -1,7 +1,7 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../_shared/value_objects/auth_vo.dart';
+import '../../../../shared/value_objects/auth_vo.dart';
 import '../../../auth/combined/domain/entity/auth_entity.dart';
 import '../../../auth/local/domain/entity/local_auth_entity.dart';
 import '../../../auth/remote/_shared/data/sign_out_repo.dart';
@@ -11,7 +11,7 @@ import '../../../env/data/repo/env_type_repo.dart';
 import '../../../env/domain/entity/env_type_entity.dart';
 
 import '../../../l10n/domain/entity/locale_entity.dart';
-import '../../../network/backend/domain/entity/core_backend.dart';
+import '../../../api/backend/domain/entity/core_backend.dart';
 import '../../../storage/general/data/local_storage_repo.dart';
 import '../../../storage/general/domain/interface/i_local_storage_repo.dart';
 import '../../../storage/secure/data/secure_storage_repo.dart';

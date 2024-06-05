@@ -2,8 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../../_shared/utils/extensions/datetime.dart';
-import '../../../../../../../l10n/l10n_helper.dart';
+import '../../../../../../../../shared/utils/extensions/datetime.dart';
+import '../../../../../../../l10n/generated/l10n.dart';
 import '../../../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../../_shared/domain/value_objects/auth_response.dart';
 import '../../domain/entity/auth_recovery_entity.dart';
@@ -45,7 +45,7 @@ class RecoveryButton extends StatelessWidget {
                         }
                       }
                     : null,
-                child: Text(context.s.sendCode),
+                child: Text(L10n.current.sendCode),
               );
             },
           ),

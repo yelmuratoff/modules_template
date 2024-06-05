@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../core/l10n/l10n_helper.dart';
+import '../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
 import 'widgets/recipe_builder.dart';
 
 class RecipeDetailsScreen extends StatelessWidget {
@@ -32,15 +32,15 @@ class RecipeDetailsScreen extends StatelessWidget {
                     CachedNetworkImageProvider(data.item.image ?? ''),
               ),
               const SizedBox(height: 16),
-              Text(data.item.name ?? context.s.noData),
+              Text(data.item.name ?? L10n.current.noData),
               Text(
-                'Difficulty: ${data.item.difficulty ?? context.s.noData}',
+                'Difficulty: ${data.item.difficulty ?? L10n.current.noData}',
               ),
               Text(
-                'Calories: ${data.item.caloriesPerServing ?? context.s.noData}',
+                'Calories: ${data.item.caloriesPerServing ?? L10n.current.noData}',
               ),
               Text(
-                'Cook time: ${data.item.cookTimeMinutes ?? context.s.noData}',
+                'Cook time: ${data.item.cookTimeMinutes ?? L10n.current.noData}',
               ),
             ],
           );

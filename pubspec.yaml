@@ -123,15 +123,16 @@ flutter:
           weight: 700
 
 flutter_gen:
-  output: lib/_shared/
+  output: lib/shared/
   line_length: 120
   integrations:
     flutter_svg: true
 
 flutter_intl:
   enabled: true
+  class_name: L10n
   main_locale: ru
-  arb_dir: lib/_shared/arb
+  arb_dir: lib/shared/arb
   output_dir: lib/core/l10n/generated
 
 flutter_launcher_icons:

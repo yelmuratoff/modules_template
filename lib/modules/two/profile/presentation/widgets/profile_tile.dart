@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../_shared/assets.gen.dart';
-import '../../../../../_shared/widgets/divider.dart';
+import '../../../../../shared/assets.gen.dart';
+import '../../../../../shared/presentation/widgets/divider.dart';
 import '../../../../../core/theme/domain/interface/i_theme.dart';
 
 class ProfileTile extends StatelessWidget {

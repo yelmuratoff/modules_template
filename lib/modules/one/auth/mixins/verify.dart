@@ -1,6 +1,6 @@
 import 'package:loader_overlay/loader_overlay.dart';
 
-import '../../../../core/_shared/app_global_keys.dart';
+import '../../../../shared/utils/app_global_keys.dart';
 import '../../../../core/auth/combined/presentation/core_auth.dart';
 import '../one_auth.dart';
 

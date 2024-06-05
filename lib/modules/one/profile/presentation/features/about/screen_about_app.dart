@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../_shared/assets.gen.dart';
-import '../../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../../_shared/widgets/app_version_widget.dart';
-import '../../../../../../_shared/widgets/divider.dart';
+import '../../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../../shared/assets.gen.dart';
+import '../../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
+import '../../../../../../shared/presentation/widgets/app_version_widget.dart';
+import '../../../../../../shared/presentation/widgets/divider.dart';
 
-import '../../../../../../_shared/widgets/remote_token_widget.dart';
-import '../../../../../../core/l10n/l10n_helper.dart';
-import '../../../../../../core/navigation/navigator1_helper.dart';
+import '../../../../../../shared/presentation/widgets/remote_token_widget.dart';
+import '../../../../../../core/router/navigator1_helper.dart';
 import '../../../../../../core/theme/domain/interface/i_theme.dart';
 import 'widgets/one_logo.dart';
 import 'widgets/screen_security_policy.dart';
@@ -20,7 +20,7 @@ class AboutAppScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppAppBar(
-        title: context.s.aboutApp,
+        title: L10n.current.aboutApp,
       ),
       body: Semantics(
         enabled: true,
@@ -43,7 +43,7 @@ class AboutAppScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      context.s.userAgreement,
+                      L10n.current.userAgreement,
                       style: context.text.s16w500,
                     ),
                   ),
@@ -64,7 +64,7 @@ class AboutAppScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      context.s.securityPolicy,
+                      L10n.current.securityPolicy,
                       style: context.text.s16w500,
                     ),
                   ),

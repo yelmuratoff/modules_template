@@ -1,6 +1,6 @@
-import '../../../../../_shared/exceptions/app_exception.dart';
-import '../../../../../_shared/value_objects/auth_vo.dart';
-import '../../../../../network/gateway/domain/interface/i_gateway.dart';
+import '../../../../../../shared/exceptions/app_exception.dart';
+import '../../../../../../shared/value_objects/auth_vo.dart';
+import '../../../../../api/gateway/domain/interface/i_gateway.dart';
 import '../../../_shared/domain/value_objects/auth_response.dart';
 import '../domain/interface/i_email_sign_up_repo.dart';
 

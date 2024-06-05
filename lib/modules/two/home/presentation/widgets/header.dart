@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/l10n/l10n_helper.dart';
 import '../../../../../core/di/module/switcher/domain/value_objects/app_module.dart';
 import '../../../../../core/di/module/switcher/presentation/module_sheet/module_button.dart';
+import '../../../../../core/l10n/generated/l10n.dart';
 import '../../../../../core/theme/domain/interface/i_theme.dart';
 
 class MainHeader extends StatelessWidget {
@@ -18,9 +18,9 @@ class MainHeader extends StatelessWidget {
         Expanded(
           flex: 40,
           child: Semantics(
-            label: context.s.appLogo,
+            label: L10n.current.appLogo,
             child: Text(
-              context.s.main,
+              L10n.current.main,
               style: context.text.s20w700.copyWith(
                 color: context.color.grey100,
               ),

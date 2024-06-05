@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import '../../../../../di.dart';
-import '../../../../_shared/app_global_keys.dart';
+import '../../../../di/di.dart';
+import '../../../../../shared/utils/app_global_keys.dart';
 import '../../../../l10n/generated/l10n.dart';
 import '../../domain/entity/local_auth_entity.dart';
 import '../../domain/value_objects/local_auth_dto.dart';
@@ -43,7 +43,7 @@ class AppLocalAuth extends StatefulWidget {
     final cubit = LocalAuthController(
       entity: appDi.core.get<LocalAuthEntity>(),
       onComplete: _hideOverlay,
-      defaultErrorMessage: S.current.somethingWentWrong,
+      defaultErrorMessage: L10n.current.somethingWentWrong,
     );
     _currentLoader = OverlayEntry(
       builder: (context) {

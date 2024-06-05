@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
-import '../../../../../../../_shared/widgets/app_bar/app_app_bar.dart';
+import '../../../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
 import '../../../../../../../core/l10n/domain/entity/locale_entity.dart';
-import '../../../../../../../di.dart';
+import '../../../../../../../core/di/di.dart';
 
 class UserAgreementScreen extends StatelessWidget {
   const UserAgreementScreen({super.key});

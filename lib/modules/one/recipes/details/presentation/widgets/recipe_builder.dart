@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../_shared/widgets/app_error_widget.dart';
-import '../../../../../../_shared/widgets/loader_overlay/app_progress_indicator.dart';
-import '../../../../../../di.dart';
+import '../../../../../../shared/presentation/widgets/app_error_widget.dart';
+import '../../../../../../shared/presentation/widgets/loader_overlay/app_progress_indicator.dart';
+import '../../../../../../core/di/di.dart';
 import '../../../../backend/one_backend.dart';
 import '../../data/repo/recipe_repo.dart';
 import '../../domain/entity/recipe_entity.dart';

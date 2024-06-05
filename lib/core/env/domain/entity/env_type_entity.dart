@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ispect/ispect.dart';
 
-import '../../../../environment.dart';
+import '../../environment.dart';
 import '../interface/i_env_type_repo.dart';
 import '../value_objects/env_type.dart';
 import 'states.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../../../_shared/widgets/multi_value_listenable_builder.dart';
-import '../../../../../../l10n/l10n_helper.dart';
+import '../../../../../../../shared/presentation/widgets/multi_value_listenable_builder.dart';
+import '../../../../../../l10n/generated/l10n.dart';
 import '../../../../../../theme/domain/interface/i_theme.dart';
 
 class SignInButton extends StatelessWidget {
@@ -28,7 +28,7 @@ class SignInButton extends StatelessWidget {
               return ElevatedButton(
                 style: context.button.elevated1,
                 onPressed: isValid ? onPressed : null,
-                child: Text(context.s.signin),
+                child: Text(L10n.current.signin),
               );
             },
           ),

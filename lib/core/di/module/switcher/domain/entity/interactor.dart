@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import '../../../../../_shared/interface/i_disposable.dart';
+import '../../../../../../shared/interface/i_disposable.dart';
 import 'module_entity.dart';
 
 class ModuleInteractor implements IDisposable {

@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import '../../../../../../_shared/widgets/app_bar/app_sliver_bar.dart';
-import '../../../../../../_shared/widgets/app_unfocuser.dart';
-import '../../../../../../_shared/widgets/banners/show_banner.dart';
-import '../../../../../../_shared/widgets/text_fields/password_text_field.dart';
-import '../../../../../../di.dart';
-import '../../../../../_shared/exceptions/app_exception.dart';
-import '../../../../../_shared/utils/extensions/object_to_error.dart';
-import '../../../../../l10n/l10n_helper.dart';
-import '../../../../../network/backend/domain/entity/core_backend.dart';
+import '../../../../../../shared/presentation/widgets/app_bar/app_sliver_bar.dart';
+import '../../../../../../shared/presentation/widgets/app_unfocuser.dart';
+import '../../../../../../shared/presentation/widgets/banners/show_banner.dart';
+import '../../../../../../shared/presentation/widgets/text_fields/password_text_field.dart';
+import '../../../../../di/di.dart';
+import '../../../../../../shared/exceptions/app_exception.dart';
+import '../../../../../../shared/utils/extensions/object_to_error.dart';
+import '../../../../../api/backend/domain/entity/core_backend.dart';
+import '../../../../../l10n/generated/l10n.dart';
 import '../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../combined/presentation/core_auth.dart';
 import '../../../_shared/domain/remote_auth_entity/remote_auth_entity.dart';
@@ -60,7 +60,7 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                 child: CustomScrollView(
                   slivers: [
                     AppSliverBar(
-                      title: context.s.changePassword,
+                      title: L10n.current.changePassword,
                     ),
                     SliverFillRemaining(
                       child: Padding(
@@ -98,7 +98,7 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                                                     );
                                               }
                                             : null,
-                                        child: Text(context.s.save),
+                                        child: Text(L10n.current.save),
                                       );
                                     },
                                   ),

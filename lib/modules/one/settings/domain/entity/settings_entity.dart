@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ispect/ispect.dart';
 
-import '../../../../../core/_shared/exceptions/app_exception.dart';
+import '../../../../../shared/exceptions/app_exception.dart';
 import '../../../../../core/storage/general/domain/interface/i_local_storage_repo.dart';
 import '../../../../../core/storage/general/domain/value_objects/storage_vo.dart';
 import '../value_objects/settings.dart';

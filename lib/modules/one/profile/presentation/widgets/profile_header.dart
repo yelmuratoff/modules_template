@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
-import '../../../../../_shared/assets.gen.dart';
+import '../../../../../shared/assets.gen.dart';
 import '../../domain/value_objects/user.dart';
 import 'profile/authorized_profile_tile.dart';
 import 'profile/unauthorized_profile_tile.dart';

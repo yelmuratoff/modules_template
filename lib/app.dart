@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:ispect/ispect.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import '_shared/widgets/loader_overlay/app_progress_indicator.dart';
-import 'core/_shared/app_global_keys.dart';
+import 'shared/presentation/widgets/loader_overlay/app_progress_indicator.dart';
+import 'shared/utils/app_global_keys.dart';
 import 'core/di/module/switcher/presentation/app_module_switcher.dart';
 import 'core/env/domain/value_objects/env_type.dart';
 import 'core/l10n/data/convert/app_locale_convert.dart';
 import 'core/l10n/domain/entity/locale_entity.dart';
 import 'core/l10n/generated/l10n.dart';
-import 'core/splash/presentation/ui/splash_screen.dart';
-import 'di.dart';
-import 'environment.dart';
+import 'shared/presentation/pages/splash/presentation/ui/splash_screen.dart';
+import 'core/di/di.dart';
+import 'core/env/environment.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -36,10 +36,10 @@ class App extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 localizationsDelegates:
                     ISpectLocalizations.localizationDelegates([
-                  S.delegate,
+                  L10n.delegate,
                 ]),
                 locale: appDi.core.get<LocaleEntity>().state.locale.toLocale(),
-                supportedLocales: S.delegate.supportedLocales,
+                supportedLocales: L10n.delegate.supportedLocales,
                 title: 'Modules template',
                 home: const SplashScreen(),
                 theme: Theme.of(context),

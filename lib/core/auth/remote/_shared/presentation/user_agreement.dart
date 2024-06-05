@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../_shared/widgets/app_checkbox.dart';
-import '../../../../../_shared/widgets/dialogs/user_agreement.dart';
-import '../../../../l10n/l10n_helper.dart';
+import '../../../../../shared/presentation/widgets/app_checkbox.dart';
+import '../../../../../shared/presentation/widgets/dialogs/user_agreement.dart';
+import '../../../../l10n/generated/l10n.dart';
 import '../../../../theme/domain/interface/i_theme.dart';
 
 class UserAgreement extends StatelessWidget {
@@ -34,12 +34,12 @@ class UserAgreement extends StatelessWidget {
             Expanded(
               child: RichText(
                 text: TextSpan(
-                  text: context.s.userLicenseAgree1,
+                  text: L10n.current.userLicenseAgree1,
                   style: context.text.s14w400.copyWith(height: 1.33),
                   children: [
                     const TextSpan(text: ' '),
                     TextSpan(
-                      text: context.s.userLicenseAgree2.toLowerCase(),
+                      text: L10n.current.userLicenseAgree2.toLowerCase(),
                       style: context.text.s14w400.copyWith(
                         color: context.color.link,
                       ),

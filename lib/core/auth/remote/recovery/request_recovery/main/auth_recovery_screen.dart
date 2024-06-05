@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../../_shared/widgets/app_tab_bar/app_tab.dart';
-import '../../../../../../_shared/widgets/app_tab_bar/app_tab_bar.dart';
-import '../../../../../../_shared/widgets/app_unfocuser.dart';
-import '../../../../../l10n/l10n_helper.dart';
+import '../../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
+import '../../../../../../shared/presentation/widgets/app_tab_bar/app_tab.dart';
+import '../../../../../../shared/presentation/widgets/app_tab_bar/app_tab_bar.dart';
+import '../../../../../../shared/presentation/widgets/app_unfocuser.dart';
+import '../../../../../l10n/generated/l10n.dart';
 import '../../../../../theme/domain/interface/i_theme.dart';
 import '../email/presentation/email_tab.dart';
 import '../phone/presentation/phone_tab.dart';
@@ -18,7 +18,7 @@ class AuthRecoveryScreen extends StatelessWidget {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppAppBar(
-          title: context.s.recoverPassword,
+          title: L10n.current.recoverPassword,
         ),
         body: DefaultTabController(
           length: 2,
@@ -37,8 +37,8 @@ class AuthRecoveryScreen extends StatelessWidget {
                     theme: context.theme,
                     padding: const EdgeInsets.only(left: 20),
                     tabs: [
-                      AppTab(text: context.s.withEmail),
-                      AppTab(text: context.s.withPhone),
+                      AppTab(text: L10n.current.withEmail),
+                      AppTab(text: L10n.current.withPhone),
                     ],
                   ),
                   const Expanded(

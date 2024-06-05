@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import '../../../../../../_shared/widgets/app_bar/app_sliver_bar.dart';
-import '../../../../../../_shared/widgets/app_unfocuser.dart';
-import '../../../../../../_shared/widgets/text_fields/email_textfield.dart';
-import '../../../../../../core/_shared/utils/extensions/object_to_error.dart';
-import '../../../../../../core/l10n/l10n_helper.dart';
-import '../../../../../../core/network/backend/domain/entity/core_backend.dart';
+import '../../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../../shared/presentation/widgets/app_bar/app_sliver_bar.dart';
+import '../../../../../../shared/presentation/widgets/app_unfocuser.dart';
+import '../../../../../../shared/presentation/widgets/text_fields/email_textfield.dart';
+import '../../../../../../shared/utils/extensions/object_to_error.dart';
+import '../../../../../../core/api/backend/domain/entity/core_backend.dart';
 import '../../../../../../core/theme/domain/interface/i_theme.dart';
-import '../../../../../../di.dart';
+import '../../../../../../core/di/di.dart';
 import '../data/repo/email_change_repo.dart';
 import '../domain/entity/email_change_entity.dart';
 import 'widgets/email_change_mixin.dart';
@@ -59,7 +59,7 @@ class _ChangeEmailScreenState extends State<ChangeEmailScreen>
                     physics: const NeverScrollableScrollPhysics(),
                     slivers: [
                       AppSliverBar(
-                        title: context.s.changeEmail,
+                        title: L10n.current.changeEmail,
                       ),
                     ],
                   ),
@@ -104,7 +104,7 @@ class _ChangeEmailScreenState extends State<ChangeEmailScreen>
                               }
                             },
                             child: Text(
-                              context.s.save,
+                              L10n.current.save,
                             ),
                           ),
                         ),

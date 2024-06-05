@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../_shared/fonts.gen.dart';
+import '../../../../../shared/fonts.gen.dart';
 import '../../../../../core/di/module/switcher/domain/value_objects/app_module.dart';
 import '../../../../../core/theme/domain/interface/i_theme.dart';
 import 'theme_button_styles.dart';

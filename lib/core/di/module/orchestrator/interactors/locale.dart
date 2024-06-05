@@ -1,5 +1,5 @@
 import '../../../../l10n/domain/entity/interactor.dart';
-import '../../../../network/backend/domain/entity/core_backend.dart';
+import '../../../../api/backend/domain/entity/core_backend.dart';
 import '../../di/i_module_di.dart';
 
 abstract class LocalePart {

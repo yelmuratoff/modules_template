@@ -4,8 +4,8 @@ import '../../generated/l10n.dart';
 extension LocalizedName on AppLocale {
   String get localizedName {
     return switch (this) {
-      AppLocale.ru => S.current.russian,
-      AppLocale.kk => S.current.kazakh,
+      AppLocale.ru => L10n.current.russian,
+      AppLocale.kk => L10n.current.kazakh,
     };
   }
 }

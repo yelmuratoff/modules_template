@@ -3,19 +3,19 @@ part of '../change_password_screen.dart';
 class _Fields {
   final currentPasswordField = PasswordTextField(
     data: PasswordTextfieldData(
-      hintText: S.current.currentPassword,
+      hintText: L10n.current.currentPassword,
     ),
   );
 
   final newPasswordField = PasswordTextField(
     data: PasswordTextfieldData(
-      hintText: S.current.newPassword,
+      hintText: L10n.current.newPassword,
     ),
   );
 
   final confPasswordField = PasswordTextField(
     data: PasswordTextfieldData(
-      hintText: S.current.confPassword,
+      hintText: L10n.current.confPassword,
     ),
   );
 
@@ -32,7 +32,7 @@ class _Fields {
         if (newPasswordField.data.controller.text !=
             confPasswordField.data.controller.text)
           {
-            newPasswordField.data.showErrors([S.current.passwordsDontMatch]),
+            newPasswordField.data.showErrors([L10n.current.passwordsDontMatch]),
           },
       ].every((element) => element == true);
 }

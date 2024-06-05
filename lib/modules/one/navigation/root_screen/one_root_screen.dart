@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/l10n/domain/entity/locale_entity.dart';
-import '../../../../core/navigation/navigator1_helper.dart';
+import '../../../../core/router/navigator1_helper.dart';
 import '../../../../core/theme/domain/interface/i_theme.dart';
-import '../../../../di.dart';
+import '../../../../core/di/di.dart';
 import '../../home/presentation/home_screen.dart';
 import '../../products/list/presentation/products_screen.dart';
 import '../../profile/presentation/profile_screen.dart';

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../_shared/assets.gen.dart';
-import '../../../_shared/widgets/divider.dart';
-import '../../../_shared/widgets/knob.dart';
-import '../../../di.dart';
-import '../../l10n/l10n_helper.dart';
+import '../../../shared/assets.gen.dart';
+import '../../../shared/presentation/widgets/divider.dart';
+import '../../../shared/presentation/widgets/knob.dart';
+import '../../di/di.dart';
+import '../../l10n/generated/l10n.dart';
 import '../../theme/domain/interface/i_theme.dart';
 import '../domain/entity/theme_entity.dart';
 
@@ -30,7 +30,7 @@ Future<String?> showThemeSheet(BuildContext context, String currentId) async {
               children: [
                 Expanded(
                   child: Text(
-                    context.s.appTheme,
+                    L10n.current.appTheme,
                     style: context.text.s20w700,
                   ),
                 ),

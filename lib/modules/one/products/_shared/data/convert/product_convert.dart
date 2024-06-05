@@ -1,4 +1,4 @@
-import '../../../../../../core/_shared/value_objects/file_box.dart';
+import '../../../../../../shared/value_objects/file_box.dart';
 import '../../domain/value_objects/product.dart';
 
 extension ProductConvert on Product {
@@ -13,7 +13,7 @@ extension ProductConvert on Product {
       category: json['category'],
       images: (json['images'] as List?)
           ?.map(
-            (e) => ScFilebox(
+            (e) => Filebox(
               uri: Uri.tryParse(e),
             ),
           )

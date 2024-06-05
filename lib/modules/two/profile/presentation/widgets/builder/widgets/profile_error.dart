@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../../_shared/widgets/signout_button/sign_out_button.dart.dart';
-import '../../../../../../../core/l10n/l10n_helper.dart';
+import '../../../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../../../shared/presentation/widgets/signout_button/sign_out_button.dart';
 import '../../../../../../../core/theme/domain/interface/i_theme.dart';
-import '../../../../../../../di.dart';
+import '../../../../../../../core/di/di.dart';
 import '../../../../domain/entity/user_entity.dart';
 
 class ProfileError extends StatelessWidget {
@@ -20,7 +20,7 @@ class ProfileError extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                message ?? context.s.somethingWentWrong,
+                message ?? L10n.current.somethingWentWrong,
                 textAlign: TextAlign.center,
               ),
             ),
@@ -36,7 +36,7 @@ class ProfileError extends StatelessWidget {
                 appDi.current.get<UserEntity>().read();
               },
               child: Text(
-                context.s.tryAgain,
+                L10n.current.tryAgain,
               ),
             ),
           ],

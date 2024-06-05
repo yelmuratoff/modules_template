@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../di.dart';
-import '../../../_shared/app_global_keys.dart';
-import '../../../navigation/navigator1_helper.dart';
+import '../../../di/di.dart';
+import '../../../../shared/utils/app_global_keys.dart';
+import '../../../router/navigator1_helper.dart';
 import '../../local/domain/value_objects/local_auth_dto.dart';
 import '../../local/presentation/ui/app_local_auth.dart';
 import '../../remote/sign_in/main/presentation/sign_in_screen.dart';

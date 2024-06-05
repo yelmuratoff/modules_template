@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../../../../_shared/widgets/divider.dart';
-import '../../../../../../core/l10n/l10n_helper.dart';
-import '../../../../../../core/navigation/navigator1_helper.dart';
+import '../../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../../shared/presentation/widgets/divider.dart';
+import '../../../../../../core/router/navigator1_helper.dart';
 import '../../../../../../core/theme/domain/interface/i_theme.dart';
 import '../../../../../_shared/features/settings/change_email/presentation/change_email_screen.dart';
 import '../../../../../_shared/features/settings/change_phone/presentation/change_phone_screen.dart';
@@ -36,13 +36,13 @@ class ProfileHeader extends StatelessWidget {
                         baseColor: context.color.background,
                         highlightColor: context.color.grey900,
                         child: Text(
-                          context.s.noData,
+                          L10n.current.noData,
                           textAlign: TextAlign.center,
                           style: context.text.s16w600,
                         ),
                       )
                     : Text(
-                        user?.fullName ?? context.s.noData,
+                        user?.fullName ?? L10n.current.noData,
                         textAlign: TextAlign.center,
                         style: context.text.s16w600,
                       ),
@@ -54,7 +54,7 @@ class ProfileHeader extends StatelessWidget {
           margin: EdgeInsets.fromLTRB(16, 12, 16, 12),
         ),
         HeaderTile(
-          label: context.s.email,
+          label: L10n.current.email,
           value: user?.email,
           isLoading: isLoading,
           onPressed: () {
@@ -65,7 +65,7 @@ class ProfileHeader extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         HeaderTile(
-          label: context.s.phone,
+          label: L10n.current.phone,
           value: user?.phone,
           isLoading: isLoading,
           onPressed: () {

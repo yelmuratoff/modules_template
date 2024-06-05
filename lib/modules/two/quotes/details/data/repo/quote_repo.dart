@@ -1,5 +1,5 @@
-import '../../../../../../core/_shared/exceptions/app_exception.dart';
-import '../../../../../../core/network/gateway/domain/interface/i_gateway.dart';
+import '../../../../../../shared/exceptions/app_exception.dart';
+import '../../../../../../core/api/gateway/domain/interface/i_gateway.dart';
 import '../../../_shared/data/convert/quote_convert.dart';
 import '../../../_shared/domain/value_objects/quote.dart';
 import '../../domain/interface/i_quote_repo.dart';

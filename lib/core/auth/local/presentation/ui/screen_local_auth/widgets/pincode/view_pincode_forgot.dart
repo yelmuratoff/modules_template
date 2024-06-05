@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../../../di.dart';
-import '../../../../../../../l10n/l10n_helper.dart';
+import '../../../../../../../di/di.dart';
+import '../../../../../../../l10n/generated/l10n.dart';
 import '../../../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../../../remote/_shared/domain/sign_out_entity/sign_out_entity.dart';
 import '../../../../controller/local_auth_controller.dart';
@@ -42,7 +42,7 @@ class ViewPincodeForgot extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      context.s.forgotPinHint,
+                      L10n.current.forgotPinHint,
                       textAlign: TextAlign.center,
                       style: context.text.hs16w700,
                     ),
@@ -54,7 +54,7 @@ class ViewPincodeForgot extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      context.s.signoutOfAccount,
+                      L10n.current.signoutOfAccount,
                       textAlign: TextAlign.center,
                       style: context.text.hs16w700,
                     ),
@@ -67,7 +67,7 @@ class ViewPincodeForgot extends StatelessWidget {
                   Expanded(
                     child: ElevatedButton(
                       style: context.button.elevated2,
-                      child: Text(context.s.signout),
+                      child: Text(L10n.current.signout),
                       onPressed: () async {
                         context.read<LocalAuthController>().unverified();
                         appDi.core.get<SignOutEntity>().add(

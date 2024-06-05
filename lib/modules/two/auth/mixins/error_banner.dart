@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../../../_shared/assets.gen.dart';
-import '../../../../_shared/widgets/banners/app_banner.dart';
-import '../../../../_shared/widgets/dialogs/exit_confirmation.dart';
-import '../../../../core/_shared/app_global_keys.dart';
+import '../../../../shared/assets.gen.dart';
+import '../../../../shared/presentation/widgets/banners/app_banner.dart';
+import '../../../../shared/presentation/widgets/dialogs/exit_confirmation.dart';
+import '../../../../shared/utils/app_global_keys.dart';
 import '../../../../core/l10n/generated/l10n.dart';
-import '../../../../core/navigation/navigator1_helper.dart';
+import '../../../../core/router/navigator1_helper.dart';
 import '../../../../core/theme/domain/entity/theme_entity.dart';
 import '../../../../core/theme/domain/interface/i_button_styles.dart';
 import '../../../../core/theme/domain/interface/i_colors.dart';
 import '../../../../core/theme/domain/interface/i_theme.dart';
-import '../../../../di.dart';
+import '../../../../core/di/di.dart';
 
 abstract final class TwoAuthBanner {
   ///Can be useful in case of a failure
@@ -62,7 +62,7 @@ abstract final class TwoAuthBanner {
                 },
               );
             },
-            child: Text(S.current.signout),
+            child: Text(L10n.current.signout),
           ),
         ],
       ),

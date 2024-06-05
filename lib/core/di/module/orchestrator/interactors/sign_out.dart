@@ -1,4 +1,4 @@
-import '../../../../_shared/utils/throw_if_needed.dart';
+import '../../../../../shared/utils/throw_if_needed.dart';
 import '../../../../auth/remote/_shared/domain/remote_auth_entity/remote_auth_entity.dart';
 import '../../../../auth/remote/_shared/domain/sign_out_entity/interactor.dart';
 import '../../../../auth/remote/_shared/domain/sign_out_entity/sign_out_entity.dart';

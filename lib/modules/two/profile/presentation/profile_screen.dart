@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../_shared/widgets/app_error_widget.dart';
-import '../../../../_shared/widgets/signout_button/sign_out_button.dart.dart';
-import '../../../../di.dart';
+import '../../../../shared/presentation/widgets/app_error_widget.dart';
+import '../../../../shared/presentation/widgets/signout_button/sign_out_button.dart';
+import '../../../../core/di/di.dart';
 import '../../auth/two_auth.dart';
 import '../domain/entity/user_entity.dart';
 import '../domain/value_objects/user.dart';

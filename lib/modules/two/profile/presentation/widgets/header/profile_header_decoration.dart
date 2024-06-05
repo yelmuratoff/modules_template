@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../../_shared/assets.gen.dart';
-import '../../../../../../_shared/widgets/loader_overlay/app_progress_indicator.dart';
+import '../../../../../../shared/assets.gen.dart';
+import '../../../../../../shared/presentation/widgets/loader_overlay/app_progress_indicator.dart';
 import '../../../../../../core/theme/domain/interface/i_theme.dart';
 import 'widgets/arc_border_painter.dart';
 import 'widgets/arc_shadow_painter.dart';

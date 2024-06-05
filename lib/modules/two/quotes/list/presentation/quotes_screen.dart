@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../core/l10n/l10n_helper.dart';
-import '../../../../../core/navigation/navigator1_helper.dart';
+import '../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
+import '../../../../../core/router/navigator1_helper.dart';
 import '../../details/presentation/quote_screen.dart';
 import 'widgets/quotes_builder.dart';
 
@@ -14,7 +14,7 @@ class QuotesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppAppBar(
         canPop: false,
-        title: context.s.quotes,
+        title: L10n.current.quotes,
       ),
       body: QuotesBuilder(
         builder: (state) {
@@ -23,7 +23,7 @@ class QuotesScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               final item = state.data.list![index];
               return ListTile(
-                title: Text(item.quote ?? context.s.noData),
+                title: Text(item.quote ?? L10n.current.noData),
                 onTap: () {
                   context.router.use.push(
                     QuoteScreen(id: item.id!),

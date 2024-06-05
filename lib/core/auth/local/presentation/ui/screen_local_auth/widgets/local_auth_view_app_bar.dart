@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../../_shared/assets.gen.dart';
-import '../../../../../../l10n/l10n_helper.dart';
+import '../../../../../../../shared/assets.gen.dart';
+import '../../../../../../l10n/generated/l10n.dart';
 import '../../../../../../theme/domain/interface/i_theme.dart';
 
 class LocalAuthViewAppBar extends StatelessWidget {
@@ -27,7 +27,7 @@ class LocalAuthViewAppBar extends StatelessWidget {
           )
         else
           Semantics(
-            label: context.s.closePermAlert,
+            label: L10n.current.closePermAlert,
             child: IconButton(
               icon: Assets.shared.icons.chevronLeft.svg(),
               color: context.color.background,

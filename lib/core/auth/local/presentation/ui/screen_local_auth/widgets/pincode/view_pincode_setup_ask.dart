@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../../l10n/l10n_helper.dart';
+import '../../../../../../../l10n/generated/l10n.dart';
 import '../../../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../controller/local_auth_controller.dart';
 import '../../widgets/local_auth_view_app_bar.dart';
@@ -36,7 +36,7 @@ class ViewPincodeSetupAsk extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      '${context.s.useAccessCode}?',
+                      '${L10n.current.useAccessCode}?',
                       textAlign: TextAlign.center,
                       style: context.text.hs16w700,
                     ),
@@ -49,7 +49,7 @@ class ViewPincodeSetupAsk extends StatelessWidget {
                   Expanded(
                     child: ElevatedButton(
                       style: context.button.elevated1,
-                      child: Text(context.s.use),
+                      child: Text(L10n.current.use),
                       onPressed: () {
                         context
                             .read<LocalAuthController>()
@@ -65,7 +65,7 @@ class ViewPincodeSetupAsk extends StatelessWidget {
                   Expanded(
                     child: OutlinedButton(
                       style: context.button.outline1,
-                      child: Text(context.s.no),
+                      child: Text(L10n.current.no),
                       onPressed: () {
                         context.read<LocalAuthController>().unverified();
                       },

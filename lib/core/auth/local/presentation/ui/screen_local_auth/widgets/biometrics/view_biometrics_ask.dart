@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import '../../../../../../../l10n/generated/l10n.dart';
 
-import '../../../../../../../../_shared/assets.gen.dart';
-import '../../../../../../../l10n/l10n_helper.dart';
+import '../../../../../../../../shared/assets.gen.dart';
 import '../../../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../../domain/entity/extensions.dart';
 import '../../../../../domain/value_objects/biometrics_type.dart';
@@ -67,8 +67,8 @@ class ViewBiometricsSetupAsk extends StatelessWidget {
                         Expanded(
                           child: Text(
                             type == BiometricsType.faceId
-                                ? context.s.useBiometry
-                                : context.s.useFingerprints,
+                                ? L10n.current.useBiometry
+                                : L10n.current.useFingerprints,
                             style: context.text.hs16w700,
                           ),
                         ),
@@ -80,7 +80,7 @@ class ViewBiometricsSetupAsk extends StatelessWidget {
                         Expanded(
                           child: ElevatedButton(
                             style: context.button.elevated1,
-                            child: Text(context.s.allow),
+                            child: Text(L10n.current.allow),
                             onPressed: () {
                               context
                                   .read<LocalAuthController>()
@@ -100,7 +100,7 @@ class ViewBiometricsSetupAsk extends StatelessWidget {
                         Expanded(
                           child: OutlinedButton(
                             style: context.button.outline1,
-                            child: Text(context.s.no),
+                            child: Text(L10n.current.no),
                             onPressed: () {
                               context.read<LocalAuthController>().unverified();
                             },
@@ -130,7 +130,7 @@ class ViewBiometricsSetupAsk extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       style: context.button.elevated2,
-                      child: Text(context.s.tryAgain),
+                      child: Text(L10n.current.tryAgain),
                       onPressed: () {
                         context.read<LocalAuthController>().biometricsSetup(
                               state.dto,

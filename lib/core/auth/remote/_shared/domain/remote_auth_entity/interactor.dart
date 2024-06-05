@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import '../../../../../_shared/interface/i_disposable.dart';
-import '../../../../../_shared/value_objects/auth_vo.dart';
+import '../../../../../../shared/interface/i_disposable.dart';
+import '../../../../../../shared/value_objects/auth_vo.dart';
 import 'remote_auth_entity.dart';
 
 class RemoteAuthInteractor implements IDisposable {

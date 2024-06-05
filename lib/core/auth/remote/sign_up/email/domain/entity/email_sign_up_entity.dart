@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../_shared/utils/throw_if_needed.dart';
+import '../../../../../../../shared/utils/throw_if_needed.dart';
 import '../interface/i_email_sign_up_repo.dart';
 import 'event.dart';
 import 'state.dart';

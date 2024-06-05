@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import '../../../../../_shared/interface/i_disposable.dart';
+import '../../../../../../shared/interface/i_disposable.dart';
 import 'sign_out_entity.dart';
 
 class SignOutInteractor implements IDisposable {

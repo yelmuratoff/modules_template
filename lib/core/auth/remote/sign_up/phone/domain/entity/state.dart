@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../../../../../../_shared/value_objects/auth_vo.dart';
+import '../../../../../../../shared/value_objects/auth_vo.dart';
 import '../../../../_shared/domain/value_objects/auth_response.dart';
 
 abstract class SignUpState {

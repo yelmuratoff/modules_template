@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import '../../../../../../_shared/assets.gen.dart';
+import '../../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../../shared/assets.gen.dart';
 import '../../../../../../core/auth/combined/presentation/core_auth.dart';
-import '../../../../../../core/l10n/l10n_helper.dart';
 import '../../../../../../core/theme/domain/interface/i_theme.dart';
 
 class UnAuthorizedProfile extends StatelessWidget {
@@ -42,21 +42,21 @@ class UnAuthorizedProfile extends StatelessWidget {
               const SizedBox(width: 16),
               Expanded(
                 child: Text(
-                  context.s.user,
+                  L10n.current.user,
                   style: context.text.s16w600.copyWith(
                     fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
               Semantics(
-                label: context.s.signIn,
+                label: L10n.current.signIn,
                 button: true,
                 child: InkWell(
                   onTap: () => CoreAuth.signIn(),
                   child: Row(
                     children: [
                       Text(
-                        context.s.signIn,
+                        L10n.current.signIn,
                         style: context.text.s16w600.copyWith(
                           color: context.color.accent,
                         ),

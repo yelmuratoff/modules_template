@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../../_shared/assets.gen.dart';
-import '../../../../../../_shared/widgets/divider.dart';
-import '../../../../../../_shared/widgets/loader_overlay/app_progress_indicator.dart';
-import '../../../../../../core/l10n/l10n_helper.dart';
+import '../../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../../shared/assets.gen.dart';
+import '../../../../../../shared/presentation/widgets/divider.dart';
+import '../../../../../../shared/presentation/widgets/loader_overlay/app_progress_indicator.dart';
 import '../../../../../../core/theme/domain/interface/i_theme.dart';
 import '../../../domain/value_objects/user.dart';
 
@@ -45,7 +45,7 @@ class AuthorizedProfile extends StatelessWidget {
                 children: [
                   const SizedBox(height: 44),
                   Text(
-                    user.fullName ?? context.s.noData,
+                    user.fullName ?? L10n.current.noData,
                     style: context.text.hs24w700,
                     textAlign: TextAlign.center,
                     maxLines: 1,
@@ -55,13 +55,13 @@ class AuthorizedProfile extends StatelessWidget {
                   const AppDivider(),
                   const SizedBox(height: 16),
                   _UserDataRow(
-                    title: context.s.email,
-                    subtitle: user.email ?? context.s.noData,
+                    title: L10n.current.email,
+                    subtitle: user.email ?? L10n.current.noData,
                   ),
                   const SizedBox(height: 8),
                   _UserDataRow(
-                    title: context.s.phoneNumber,
-                    subtitle: user.phone ?? context.s.noData,
+                    title: L10n.current.phoneNumber,
+                    subtitle: user.phone ?? L10n.current.noData,
                   ),
                   const SizedBox(height: 20),
                 ],

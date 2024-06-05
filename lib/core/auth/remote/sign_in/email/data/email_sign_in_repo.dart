@@ -1,5 +1,5 @@
-import '../../../../../_shared/exceptions/app_exception.dart';
-import '../../../../../network/gateway/domain/interface/i_gateway.dart';
+import '../../../../../../shared/exceptions/app_exception.dart';
+import '../../../../../api/gateway/domain/interface/i_gateway.dart';
 import '../domain/interface/i_email_sign_in_repo.dart';
 
 class EmailSignInRepo implements IEmailSignInRepo {

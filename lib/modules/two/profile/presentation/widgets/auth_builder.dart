@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../_shared/widgets/loader_overlay/app_progress_indicator.dart';
+import '../../../../../shared/presentation/widgets/loader_overlay/app_progress_indicator.dart';
 import '../../../../../core/auth/remote/_shared/domain/remote_auth_entity/remote_auth_entity.dart';
-import '../../../../../di.dart';
+import '../../../../../core/di/di.dart';
 
 class AuthBuilder extends StatelessWidget {
   const AuthBuilder({

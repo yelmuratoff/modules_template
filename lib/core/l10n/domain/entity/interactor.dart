@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import '../../../_shared/interface/i_disposable.dart';
+import '../../../../shared/interface/i_disposable.dart';
 import '../value_objects/app_locale.dart';
 import 'locale_entity.dart';
 

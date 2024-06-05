@@ -4,8 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_login_facebook/flutter_login_facebook.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import '../../../../../_shared/utils/throw_if_needed.dart';
-import '../../../../../_shared/value_objects/auth_vo.dart';
+import '../../../../../../shared/utils/throw_if_needed.dart';
+import '../../../../../../shared/value_objects/auth_vo.dart';
 import '../../../../../storage/secure/domain/i_secure_storage_repo.dart';
 import '../interface/i_sign_out_repo.dart';
 import 'state.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../l10n/l10n_helper.dart';
-import '../../../../../../navigation/navigator1_helper.dart';
+import '../../../../../../l10n/generated/l10n.dart';
+import '../../../../../../router/navigator1_helper.dart';
 import '../../../../../../theme/domain/interface/i_theme.dart';
 
 class SignInButton extends StatelessWidget {
@@ -13,7 +13,7 @@ class SignInButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          '${context.s.haveAccount}?',
+          '${L10n.current.haveAccount}?',
           style: context.text.s16w400,
         ),
         TextButton(
@@ -21,7 +21,7 @@ class SignInButton extends StatelessWidget {
           onPressed: () {
             context.router.pop();
           },
-          child: Text(context.s.signin),
+          child: Text(L10n.current.signin),
         ),
       ],
     );

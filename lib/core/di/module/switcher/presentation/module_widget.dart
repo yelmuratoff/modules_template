@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../di.dart';
+import '../../../di.dart';
 import '../../../../theme/domain/entity/theme_entity.dart';
 import '../../../../theme/domain/interface/i_theme.dart';
 import '../../di/i_module_di.dart';

@@ -2,19 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import '../../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../../_shared/widgets/app_unfocuser.dart';
-import '../../../../../../_shared/widgets/banners/show_banner.dart';
-import '../../../../../../_shared/widgets/text_fields/password_text_field.dart';
-import '../../../../../../core/_shared/exceptions/app_exception.dart';
-import '../../../../../../core/_shared/utils/extensions/object_to_error.dart';
+import '../../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
+import '../../../../../../shared/presentation/widgets/app_unfocuser.dart';
+import '../../../../../../shared/presentation/widgets/banners/show_banner.dart';
+import '../../../../../../shared/presentation/widgets/text_fields/password_text_field.dart';
+import '../../../../../../shared/exceptions/app_exception.dart';
+import '../../../../../../shared/utils/extensions/object_to_error.dart';
 import '../../../../../../core/auth/remote/recovery/request_recovery/main/auth_recovery_screen.dart';
-import '../../../../../../core/network/backend/domain/entity/core_backend.dart';
+import '../../../../../../core/api/backend/domain/entity/core_backend.dart';
 import '../../../../../../core/l10n/generated/l10n.dart';
-import '../../../../../../core/l10n/l10n_helper.dart';
-import '../../../../../../core/navigation/navigator1_helper.dart';
+import '../../../../../../core/router/navigator1_helper.dart';
 import '../../../../../../core/theme/domain/interface/i_theme.dart';
-import '../../../../../../di.dart';
+import '../../../../../../core/di/di.dart';
 import '../data/pass_change_repo.dart';
 import '../domain/entity/pass_change_entity.dart';
 
@@ -51,7 +50,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
           builder: (context) {
             return Scaffold(
               appBar: AppAppBar(
-                title: context.s.changePassword,
+                title: L10n.current.changePassword,
               ),
               body: Column(
                 children: [
@@ -61,7 +60,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                       physics: const BouncingScrollPhysics(),
                       children: [
                         Text(
-                          context.s.currentPassword,
+                          L10n.current.currentPassword,
                           style: context.text.s14w400.copyWith(
                             color: context.color.grey900,
                           ),
@@ -70,7 +69,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         fields.currentPasswordField,
                         const SizedBox(height: 16),
                         Text(
-                          context.s.newPassword,
+                          L10n.current.newPassword,
                           style: context.text.s14w400.copyWith(
                             color: context.color.grey900,
                           ),
@@ -79,7 +78,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         fields.newPasswordField,
                         const SizedBox(height: 16),
                         Text(
-                          context.s.confPassword,
+                          L10n.current.confPassword,
                           style: context.text.s14w400.copyWith(
                             color: context.color.grey900,
                           ),
@@ -96,7 +95,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                               );
                             },
                             child: Text(
-                              '${context.s.forgotPassword} ?',
+                              '${L10n.current.forgotPassword} ?',
                               style: context.text.s16w400.copyWith(
                                 color: context.color.accent,
                               ),
@@ -144,7 +143,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                       if (state is ChangeSuccess) {
                         Navigator.of(context).pop();
                         ShowBanner.success(
-                          message: context.s.passwordSaved,
+                          message: L10n.current.passwordSaved,
                           seconds: 3,
                         );
                       }
@@ -172,7 +171,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                               );
                             }
                           },
-                          child: Text(context.s.save),
+                          child: Text(L10n.current.save),
                         ),
                       );
                     },

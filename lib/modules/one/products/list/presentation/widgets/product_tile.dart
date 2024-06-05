@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../../core/l10n/l10n_helper.dart';
-import '../../../../../../core/navigation/navigator1_helper.dart';
+import '../../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../../core/router/navigator1_helper.dart';
 import '../../../_shared/domain/value_objects/product.dart';
 import '../../../details/presentation/product_details_screen.dart';
 
@@ -18,13 +18,13 @@ class ProductTile extends StatelessWidget {
         radius: 30,
         backgroundImage: CachedNetworkImageProvider(item.thumbnail ?? ''),
       ),
-      title: Text(item.title ?? context.s.noData),
+      title: Text(item.title ?? L10n.current.noData),
       subtitle: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Price: ${item.price ?? context.s.noData}'),
+          Text('Price: ${item.price ?? L10n.current.noData}'),
           const Spacer(),
-          Text('Stock: ${item.stock ?? context.s.noData}'),
+          Text('Stock: ${item.stock ?? L10n.current.noData}'),
         ],
       ),
       onTap: () {

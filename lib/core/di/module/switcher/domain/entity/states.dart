@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../../../../../_shared/utils/extensions/string.dart';
+import '../../../../../../shared/utils/extensions/string.dart';
 import '../value_objects/app_module.dart';
 
 class ModuleState with EquatableMixin {

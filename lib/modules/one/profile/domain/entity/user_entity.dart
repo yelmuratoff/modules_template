@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../core/_shared/utils/throw_if_needed.dart';
+import '../../../../../shared/utils/throw_if_needed.dart';
 import '../../data/repo/user_repo.dart';
 import '../value_objects/user.dart';
 import 'states.dart';

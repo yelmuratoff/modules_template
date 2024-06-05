@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
-import '../../../../../../di.dart';
-import '../../../../../_shared/exceptions/app_exception.dart';
-import '../../../../../_shared/utils/extensions/object_to_error.dart';
-import '../../../../../../_shared/widgets/banners/show_banner.dart';
-import '../../../../../../_shared/widgets/text_fields/email_textfield.dart';
-import '../../../../../../_shared/widgets/text_fields/password_text_field.dart';
-import '../../../../../network/backend/domain/entity/core_backend.dart';
-import '../../../../../l10n/l10n_helper.dart';
-import '../../../../../navigation/navigator1_helper.dart';
+import '../../../../../di/di.dart';
+import '../../../../../../shared/exceptions/app_exception.dart';
+import '../../../../../../shared/utils/extensions/object_to_error.dart';
+import '../../../../../../shared/presentation/widgets/banners/show_banner.dart';
+import '../../../../../../shared/presentation/widgets/text_fields/email_textfield.dart';
+import '../../../../../../shared/presentation/widgets/text_fields/password_text_field.dart';
+import '../../../../../api/backend/domain/entity/core_backend.dart';
+import '../../../../../l10n/generated/l10n.dart';
+import '../../../../../router/navigator1_helper.dart';
 import '../../../../../theme/domain/interface/i_theme.dart';
 import '../../../../combined/presentation/core_auth.dart';
 import '../../../_shared/domain/remote_auth_entity/remote_auth_entity.dart';
@@ -86,7 +86,7 @@ class _EmailTabState extends State<EmailTab> {
             const SizedBox(height: 14),
             TextButton(
               style: context.button.text1,
-              child: Text('${context.s.forgotPassword}?'),
+              child: Text('${L10n.current.forgotPassword}?'),
               onPressed: () {
                 context.router.use.push(
                   const AuthRecoveryScreen(),

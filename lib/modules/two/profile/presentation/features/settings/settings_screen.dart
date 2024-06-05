@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../_shared/assets.gen.dart';
-import '../../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../../_shared/widgets/dialogs/app_dialog_extra.dart';
-import '../../../../../../_shared/widgets/divider.dart';
+import '../../../../../../core/l10n/generated/l10n.dart';
+import '../../../../../../shared/assets.gen.dart';
+import '../../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
+import '../../../../../../shared/presentation/widgets/dialogs/app_dialog_extra.dart';
+import '../../../../../../shared/presentation/widgets/divider.dart';
 
-import '../../../../../../_shared/widgets/settings_local_auth_widget.dart';
-import '../../../../../../_shared/widgets/settings_tile.dart';
-import '../../../../../../core/l10n/l10n_helper.dart';
-import '../../../../../../core/navigation/navigator1_helper.dart';
+import '../../../../../../shared/presentation/widgets/settings_local_auth_widget.dart';
+import '../../../../../../shared/presentation/widgets/settings_tile.dart';
+import '../../../../../../core/router/navigator1_helper.dart';
 import '../../../../../../core/theme/domain/interface/i_theme.dart';
-import '../../../../../../di.dart';
+import '../../../../../../core/di/di.dart';
 import '../../../../../_shared/features/settings/change_email/presentation/change_email_screen.dart';
 import '../../../../../_shared/features/settings/change_password/presentation/change_password_screen.dart';
 import '../../../../../_shared/features/settings/change_phone/presentation/change_phone_screen.dart';
@@ -27,7 +27,7 @@ class SettingsScreen extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: AppAppBar(
-            title: context.s.settings,
+            title: L10n.current.settings,
           ),
           body: Padding(
             padding: const EdgeInsets.only(left: 16, top: 16),
@@ -35,13 +35,13 @@ class SettingsScreen extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               children: [
                 Text(
-                  context.s.profile,
+                  L10n.current.profile,
                   style: context.text.s12w700.copyWith(
                     color: context.color.accent,
                   ),
                 ),
                 SettingsTile.chevron(
-                  title: context.s.changeEmail,
+                  title: L10n.current.changeEmail,
                   subtitle: state.currentUser?.email,
                   onPressed: () {
                     context.router.use.push(
@@ -55,7 +55,7 @@ class SettingsScreen extends StatelessWidget {
                 ),
                 const AppDivider(),
                 SettingsTile.chevron(
-                  title: context.s.changePhoneNumber,
+                  title: L10n.current.changePhoneNumber,
                   subtitle: state.currentUser?.phone,
                   onPressed: () {
                     context.router.use.push(
@@ -65,7 +65,7 @@ class SettingsScreen extends StatelessWidget {
                 ),
                 const AppDivider(),
                 SettingsTile.chevron(
-                  title: context.s.changePassword,
+                  title: L10n.current.changePassword,
                   onPressed: () {
                     context.router.use.push(
                       const ChangePasswordScreen(),
@@ -74,20 +74,20 @@ class SettingsScreen extends StatelessWidget {
                 ),
                 const AppDivider(),
                 SettingsTile(
-                  title: context.s.removeAccount,
+                  title: L10n.current.removeAccount,
                   onPressed: () {
                     showAppDialogExtra(
                       context,
                       icon: Assets.shared.icons.trashOutlined.svg(),
-                      title: context.s.accountDeletetionConfirmationTitle,
+                      title: L10n.current.accountDeletetionConfirmationTitle,
                       actionsBuilder: (context) {
                         return [
                           DialogButton(
-                            label: context.s.cancel,
+                            label: L10n.current.cancel,
                             onPressed: Navigator.of(context).pop,
                           ),
                           DialogButton(
-                            label: context.s.delete,
+                            label: L10n.current.delete,
                             style: context.button.text1,
                             onPressed: () {
                               Navigator.of(context).pop();

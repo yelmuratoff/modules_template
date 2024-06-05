@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../_shared/widgets/app_bar/app_app_bar.dart';
-import '../../../../../../_shared/widgets/app_tab_bar/app_tab.dart';
-import '../../../../../../_shared/widgets/app_tab_bar/app_tab_bar.dart';
-import '../../../../../../_shared/widgets/app_unfocuser.dart';
-import '../../../../../../_shared/widgets/utils/get_logo_path.dart';
-import '../../../../../../di.dart';
+import '../../../../../../shared/presentation/widgets/app_bar/app_app_bar.dart';
+import '../../../../../../shared/presentation/widgets/app_tab_bar/app_tab.dart';
+import '../../../../../../shared/presentation/widgets/app_tab_bar/app_tab_bar.dart';
+import '../../../../../../shared/presentation/widgets/app_unfocuser.dart';
+import '../../../../../../shared/presentation/widgets/utils/get_logo_path.dart';
+import '../../../../../di/di.dart';
 import '../../../../../di/module/switcher/domain/entity/module_entity.dart';
-import '../../../../../l10n/l10n_helper.dart';
+import '../../../../../l10n/generated/l10n.dart';
 import '../../../../../theme/domain/interface/i_theme.dart';
 import '../../email/presentation/email_tab.dart';
 import '../../phone/presentation/phone_tab.dart';
@@ -20,7 +20,7 @@ class SignUpScreen extends StatelessWidget {
     return AppUnfocuser(
       child: Scaffold(
         appBar: AppAppBar(
-          title: context.s.createAccount,
+          title: L10n.current.createAccount,
         ),
         body: DefaultTabController(
           length: 2,
@@ -45,8 +45,8 @@ class SignUpScreen extends StatelessWidget {
                   AppTabBar(
                     theme: context.theme,
                     tabs: [
-                      AppTab(text: context.s.withEmail),
-                      AppTab(text: context.s.withPhone),
+                      AppTab(text: L10n.current.withEmail),
+                      AppTab(text: L10n.current.withPhone),
                     ],
                   ),
                   const SizedBox(height: 8),

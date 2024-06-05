@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../_shared/widgets/knob.dart';
-import '../../../../../../_shared/widgets/utils/get_logo_path.dart';
-import '../../../../../../di.dart';
+import '../../../../../../shared/presentation/widgets/knob.dart';
+import '../../../../../../shared/presentation/widgets/utils/get_logo_path.dart';
+import '../../../../di.dart';
 import '../../domain/entity/module_entity.dart';
 import '../../../../../theme/domain/interface/i_theme.dart';
 

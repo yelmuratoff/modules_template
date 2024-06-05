@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../di.dart';
-import '../../../../_shared/utils/extensions/string.dart';
-import '../../../../navigation/navigator1_helper.dart';
+import '../../../di.dart';
+import '../../../../../shared/utils/extensions/string.dart';
+import '../../../../router/navigator1_helper.dart';
 import '../domain/entity/module_entity.dart';
 import 'module_widget.dart';
 

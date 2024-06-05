@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../_shared/assets.gen.dart';
-import '../../../_shared/widgets/divider.dart';
-import '../../../_shared/widgets/knob.dart';
-import '../../../di.dart';
+import '../../../shared/assets.gen.dart';
+import '../../../shared/presentation/widgets/divider.dart';
+import '../../../shared/presentation/widgets/knob.dart';
+import '../../di/di.dart';
 import '../../theme/domain/interface/i_theme.dart';
 import '../domain/entity/locale_entity.dart';
 import '../domain/value_objects/app_locale.dart';
-import '../l10n_helper.dart';
+import '../generated/l10n.dart';
 import 'utils/locale_name.dart';
 
 Future<AppLocale?> showLangSheet(
@@ -35,7 +35,7 @@ Future<AppLocale?> showLangSheet(
               children: [
                 Expanded(
                   child: Text(
-                    context.s.interfaceLang,
+                    L10n.current.interfaceLang,
                     style: context.text.s20w700,
                   ),
                 ),
