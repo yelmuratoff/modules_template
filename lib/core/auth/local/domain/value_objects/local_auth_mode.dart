@@ -1,0 +1,1 @@
+enum LocalAuthMode { pin, biometrics }

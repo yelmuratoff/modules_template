@@ -1,0 +1,1 @@
+enum AppModule { one, two }

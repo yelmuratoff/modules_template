@@ -1,0 +1,1 @@
+enum BiometricsType { faceId, fingerprint }
