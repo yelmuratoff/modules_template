@@ -1,4 +1,4 @@
-import 'package:sc_logger/sc_logger.dart';
+import 'package:ispect/ispect.dart';
 
 import '../../../core/network/backend/domain/entity/interceptors/auth_interceptor.dart';
 import '../../../core/network/backend/domain/entity/interceptors/error_interceptor.dart';
@@ -29,7 +29,7 @@ class TwoBackend extends BackendBase {
             AuthInterceptor(authVo: () => authVo),
             ErrorInterceptor(
               onAuthError: (error) {
-                Log.error(error);
+                talkerWrapper.error(message: error.toString());
                 emitError(error);
               },
             ),
@@ -47,7 +47,7 @@ class TwoBackend extends BackendBase {
             AuthInterceptor(authVo: () => authVo),
             ErrorInterceptor(
               onAuthError: (error) {
-                Log.error(error);
+                talkerWrapper.error(message: error.toString());
                 emitError(error);
               },
             ),

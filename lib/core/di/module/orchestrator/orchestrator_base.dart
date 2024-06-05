@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:sc_logger/sc_logger.dart';
+import 'package:ispect/ispect.dart';
 
 import '../../../_shared/interface/i_disposable.dart';
 import '../di/i_module_di.dart';
@@ -27,7 +27,11 @@ base class OrchestratorBase {
       final futures = interactors.map((e) => e.dispose()).toList();
       await Future.wait(futures);
     } catch (e, stack) {
-      Log.error(e, stack, '$runtimeType orchestrator dispose');
+      talkerWrapper.handle(
+        exception: e,
+        stackTrace: stack,
+        message: '$runtimeType orchestrator dispose',
+      );
       rethrow;
     }
   }

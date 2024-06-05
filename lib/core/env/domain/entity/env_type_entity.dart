@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sc_logger/sc_logger.dart';
+import 'package:ispect/ispect.dart';
 
 import '../../../../environment.dart';
 import '../interface/i_env_type_repo.dart';
@@ -29,7 +29,11 @@ class EnvTypeEntity extends Cubit<EnvTypeState> {
         );
       }
     } catch (error, stack) {
-      Log.error(error, stack, 'EnvTypeEntity.read()');
+      talkerWrapper.handle(
+        exception: error,
+        stackTrace: stack,
+        message: 'EnvTypeEntity.read()',
+      );
     }
   }
 

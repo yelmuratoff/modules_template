@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sc_logger/sc_logger.dart';
+import 'package:ispect/ispect.dart';
 
 import '../../../../../core/_shared/exceptions/app_exception.dart';
 import '../../../../../core/storage/general/domain/interface/i_local_storage_repo.dart';
@@ -22,7 +22,11 @@ class SettingsEntity extends Cubit<SettingsState> {
     try {
       await _delete(_Keys.values);
     } catch (error, stack) {
-      Log.error(error, stack, 'SettingsEntity');
+      talkerWrapper.handle(
+        exception: error,
+        stackTrace: stack,
+        message: 'SettingsEntity.reset()',
+      );
     }
   }
 

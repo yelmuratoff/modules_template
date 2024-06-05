@@ -1,5 +1,5 @@
 import '../../../../../core/di/module/di/i_module_di.dart';
-import '../../../../../core/env_type/domain/entity/interactor.dart';
+import '../../../../../core/env/domain/entity/interactor.dart';
 import '../../../backend/one_backend.dart';
 
 abstract class EnvTypePart {

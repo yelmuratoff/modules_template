@@ -1,6 +1,6 @@
 import '../../../core/auth/remote/_shared/domain/remote_auth_entity/remote_auth_entity.dart';
 import '../../../core/di/module/dependencies/i_dependencies.dart';
-import '../../../core/env_type/domain/entity/env_type_entity.dart';
+import '../../../core/env/domain/entity/env_type_entity.dart';
 import '../../../core/l10n/domain/entity/locale_entity.dart';
 import '../../../core/storage/general/domain/interface/i_local_storage_repo.dart';
 import '../../../core/theme/domain/entity/theme_entity.dart';

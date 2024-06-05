@@ -33,7 +33,9 @@ class RecipeDetailsScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               Text(data.item.name ?? context.s.noData),
-              Text('Difficulty: ${data.item.difficulty ?? context.s.noData}'),
+              Text(
+                'Difficulty: ${data.item.difficulty ?? context.s.noData}',
+              ),
               Text(
                 'Calories: ${data.item.caloriesPerServing ?? context.s.noData}',
               ),

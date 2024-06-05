@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'i_gateway.dart';
 import 'utils/bad_cert_override.dart';
 
-export '../../../../env_type/domain/value_objects/env_type.dart';
+export '../../../../env/domain/value_objects/env_type.dart';
 
 base class BaseGateway implements IGateway {
   BaseGateway({

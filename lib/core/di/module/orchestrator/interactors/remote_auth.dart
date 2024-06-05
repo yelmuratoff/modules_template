@@ -1,4 +1,4 @@
-import 'package:sc_logger/sc_logger.dart';
+import 'package:ispect/ispect.dart';
 
 import '../../../../auth/local/domain/entity/local_auth_entity.dart';
 import '../../../../auth/remote/_shared/domain/remote_auth_entity/interactor.dart';
@@ -10,11 +10,11 @@ abstract class RemoteAuthPart {
     return RemoteAuthInteractor(
       entity: coreDi.get(),
       onSignIn: (vo) {
-        Log.w(vo.token, 'Token');
+        talkerWrapper.debug('Token: ${vo.token}');
         coreDi.get<CoreBackend>().updateAuthVo(vo);
       },
       onUpdate: (state) {
-        Log.w(state.authVo, 'Token');
+        talkerWrapper.debug('RemoteAuthPart onUpdate: ${state.authVo.token}');
         coreDi.get<CoreBackend>().updateAuthVo(state.authVo);
       },
       onSignOut: () {

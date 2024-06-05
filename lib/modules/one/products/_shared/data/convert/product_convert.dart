@@ -1,5 +1,4 @@
-import 'package:sc_picker_and_gallery/_shared/dto/sc_filebox.dart';
-
+import '../../../../../../core/_shared/value_objects/file_box.dart';
 import '../../domain/value_objects/product.dart';
 
 extension ProductConvert on Product {

@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:sc_picker_and_gallery/_shared/dto/sc_filebox.dart';
+
+import '../../../../../../core/_shared/value_objects/file_box.dart';
 
 class Product extends Equatable {
   const Product({

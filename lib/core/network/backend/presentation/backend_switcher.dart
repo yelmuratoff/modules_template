@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../di.dart';
-import '../../../env_type/domain/entity/env_type_entity.dart';
-import '../../../env_type/presentation/env_sheet.dart';
+import '../../../env/domain/entity/env_type_entity.dart';
+import '../../../env/presentation/env_sheet.dart';
 
 class BackendSwitcher extends StatefulWidget {
   const BackendSwitcher({

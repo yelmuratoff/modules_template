@@ -1,5 +1,3 @@
-import 'package:sc_logger/sc_logger.dart';
-
 import '../../../../../../core/_shared/exceptions/app_exception.dart';
 import '../../../../../../core/network/gateway/domain/interface/i_gateway.dart';
 import '../domain/interface/i_pass_change_repo.dart';
@@ -22,7 +20,7 @@ class PassChangeRepo implements IPassChangeRepo {
         'password_confirmation': password,
       },
     );
-    Log.c(response.verbose);
+
     final error = AuthException.fromMap(response.data);
     if (error.isNotEmpty) throw error;
   }

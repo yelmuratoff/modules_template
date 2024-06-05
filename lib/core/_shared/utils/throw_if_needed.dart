@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:sc_logger/sc_logger.dart';
+import 'package:ispect/ispect.dart';
 
 import '../exceptions/app_exception.dart';
 
@@ -7,7 +7,7 @@ void throwIfNeeded(Object error, StackTrace stackTrace) {
   switch (error) {
     case final BackendException _:
     case final AuthException _:
-      Log.error(error);
+      talkerWrapper.handle(exception: error, stackTrace: stackTrace);
       break;
 
     case final DioException error:

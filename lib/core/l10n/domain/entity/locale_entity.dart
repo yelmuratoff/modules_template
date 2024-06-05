@@ -3,7 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:sc_logger/sc_logger.dart';
+import 'package:ispect/ispect.dart';
 
 import '../../../../environment.dart';
 import '../../../_shared/utils/throw_if_needed.dart';
@@ -39,7 +39,11 @@ class LocaleEntity extends Cubit<LocaleState> {
         AppLocaleConvert.fromStorage(dto),
       );
     } catch (error, stack) {
-      Log.error(error, stack, 'Failed to apply locale');
+      talkerWrapper.handle(
+        exception: error,
+        stackTrace: stack,
+        message: 'Failed to apply locale',
+      );
       return false;
     }
   }
@@ -55,7 +59,11 @@ class LocaleEntity extends Cubit<LocaleState> {
       );
       return true;
     } catch (error, stack) {
-      Log.r('Failed to apply locale');
+      talkerWrapper.handle(
+        exception: error,
+        stackTrace: stack,
+        message: 'Failed to apply locale',
+      );
       throwIfNeeded(error, stack);
       return false;
     }

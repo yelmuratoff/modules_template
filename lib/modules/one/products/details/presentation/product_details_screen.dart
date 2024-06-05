@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:sc_picker_and_gallery/gallery/sc_gallery.dart';
 
 import '../../../../../_shared/widgets/app_bar/app_app_bar.dart';
 import '../../../../../core/l10n/l10n_helper.dart';
@@ -46,18 +45,9 @@ class ProductDetailsScreen extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: data.item.images?.length ?? 0,
                 itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () {
-                      ScGallery().show(
-                        context,
-                        initialIndex: index,
-                        files: data.item.images ?? [],
-                      );
-                    },
-                    child: CachedNetworkImage(
-                      imageUrl: data.item.images![index].fullPath,
-                      fit: BoxFit.cover,
-                    ),
+                  return CachedNetworkImage(
+                    imageUrl: data.item.images![index].fullPath,
+                    fit: BoxFit.cover,
                   );
                 },
               ),

@@ -1,7 +1,7 @@
 import '../../../auth/combined/domain/entity/auth_entity.dart';
 import '../../../auth/local/domain/entity/local_auth_entity.dart';
 import '../../../auth/remote/_shared/domain/remote_auth_entity/remote_auth_entity.dart';
-import '../../../env_type/domain/entity/env_type_entity.dart';
+import '../../../env/domain/entity/env_type_entity.dart';
 import '../../../l10n/domain/entity/locale_entity.dart';
 import '../di/i_module_di.dart';
 import '../switcher/domain/entity/module_entity.dart';

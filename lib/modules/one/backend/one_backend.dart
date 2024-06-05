@@ -1,4 +1,4 @@
-import 'package:sc_logger/sc_logger.dart';
+import 'package:ispect/ispect.dart';
 
 import '../../../core/di/module/switcher/domain/value_objects/app_module.dart';
 import '../../../core/network/backend/domain/entity/interceptors/auth_interceptor.dart';
@@ -19,7 +19,6 @@ class OneBackend extends BackendBase {
     return switch (envType) {
       EnvType.prod => OneGateway(
           envType: EnvType.prod,
-          // localeCode: localeCode,
           uri: Environment.moduleUri(AppModule.one, EnvType.prod),
           headers: {
             'content-type': 'application/json; charset=utf-8',
@@ -29,7 +28,7 @@ class OneBackend extends BackendBase {
             AuthInterceptor(authVo: () => authVo),
             ErrorInterceptor(
               onAuthError: (error) {
-                Log.error(error);
+                talkerWrapper.error(message: error.toString());
                 emitError(error);
               },
             ),
@@ -37,7 +36,6 @@ class OneBackend extends BackendBase {
         ),
       EnvType.dev => OneGateway(
           envType: EnvType.dev,
-          // localeCode: localeCode,
           uri: Environment.moduleUri(AppModule.one, EnvType.dev),
           headers: {
             'content-type': 'application/json; charset=utf-8',
@@ -47,7 +45,7 @@ class OneBackend extends BackendBase {
             AuthInterceptor(authVo: () => authVo),
             ErrorInterceptor(
               onAuthError: (error) {
-                Log.error(error);
+                talkerWrapper.error(message: error.toString());
                 emitError(error);
               },
             ),

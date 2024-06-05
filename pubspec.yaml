@@ -36,10 +36,6 @@ dependencies:
   talker_dio_logger: ^4.2.3
   talker_bloc_logger: ^4.2.3
   talker_riverpod_logger: ^1.0.3
-  sc_logger:
-    git:
-      url: https://gitlab.com/simplecodedev/internalprojects/library/flutter-library/sc_logger.git
-      ref: 0.0.5
 
   # Utils
   collection: ^1.18.0
@@ -61,11 +57,7 @@ dependencies:
   flutter_easyloading: ^3.0.5
   auto_size_text: ^3.0.0
   fluttertoast: ^8.2.6
-  ispect: ^1.1.7
-  sc_picker_and_gallery:
-    git:
-      url: https://gitlab.com/simplecodedev/internalprojects/library/flutter-library/sc_picker_and_gallery.git
-      ref: 0.1.0
+  ispect: ^1.1.8
 
   # Authentication
   flutter_login_facebook: ^2.0.0

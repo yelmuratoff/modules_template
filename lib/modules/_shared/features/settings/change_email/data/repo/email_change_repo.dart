@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart' as dio;
-import 'package:sc_logger/sc_logger.dart';
 
 import '../../../../../../../core/_shared/exceptions/app_exception.dart';
 import '../../../../../../../core/network/gateway/domain/interface/i_gateway.dart';
@@ -28,7 +27,7 @@ class EmailChangeRepo implements IEmailChangeRepo {
         receiveTimeout: const Duration(seconds: 30),
       ),
     );
-    Log.c(response.verbose);
+
     final errors = AuthException.fromMap(response.data);
     if (errors.isNotEmpty) throw errors;
     return response.data['message'];
@@ -42,7 +41,7 @@ class EmailChangeRepo implements IEmailChangeRepo {
         'email': email,
       },
     );
-    Log.c(response.verbose);
+
     final errors = AuthException.fromMap(response.data);
     if (errors.isNotEmpty) throw errors;
     try {

@@ -7,8 +7,8 @@ import '../../../auth/local/domain/entity/local_auth_entity.dart';
 import '../../../auth/remote/_shared/data/sign_out_repo.dart';
 import '../../../auth/remote/_shared/domain/remote_auth_entity/remote_auth_entity.dart';
 import '../../../auth/remote/_shared/domain/sign_out_entity/sign_out_entity.dart';
-import '../../../env_type/data/repo/env_type_repo.dart';
-import '../../../env_type/domain/entity/env_type_entity.dart';
+import '../../../env/data/repo/env_type_repo.dart';
+import '../../../env/domain/entity/env_type_entity.dart';
 
 import '../../../l10n/domain/entity/locale_entity.dart';
 import '../../../network/backend/domain/entity/core_backend.dart';

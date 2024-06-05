@@ -1,4 +1,4 @@
-import 'package:sc_logger/sc_logger.dart';
+import 'package:ispect/ispect.dart';
 
 import '../../../storage/general/domain/interface/i_local_storage_repo.dart';
 import '../../../storage/general/domain/value_objects/storage_vo.dart';
@@ -16,7 +16,11 @@ class OnboardingRepo implements IOnboardingRepo {
       final output = await storage.read<bool>(key);
       return output.value ?? false;
     } catch (error, stack) {
-      Log.error(error, stack, 'OnboardingRepo.isDismissed()');
+      talkerWrapper.handle(
+        exception: error,
+        stackTrace: stack,
+        message: 'OnboardingRepo.isDismissed()',
+      );
       return false;
     }
   }
@@ -31,7 +35,11 @@ class OnboardingRepo implements IOnboardingRepo {
         ),
       );
     } catch (error, stack) {
-      Log.error(error, stack, 'OnboardingRepo.save()');
+      talkerWrapper.handle(
+        exception: error,
+        stackTrace: stack,
+        message: 'OnboardingRepo.saveDismissed()',
+      );
     }
   }
 }

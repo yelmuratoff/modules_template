@@ -7,7 +7,7 @@ import '../../../../l10n/domain/value_objects/app_locale.dart';
 import '../../../gateway/domain/interface/i_gateway.dart';
 
 export '../../../../_shared/value_objects/auth_vo.dart';
-export '../../../../env_type/domain/value_objects/env_type.dart';
+export '../../../../env/domain/value_objects/env_type.dart';
 export '../../../gateway/domain/interface/base_gateway.dart';
 
 abstract class BackendBase {

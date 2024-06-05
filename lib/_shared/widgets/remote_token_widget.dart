@@ -4,7 +4,7 @@ import 'package:share_plus/share_plus.dart';
 
 import '../../../../../core/l10n/l10n_helper.dart';
 import '../../core/auth/remote/_shared/domain/remote_auth_entity/remote_auth_entity.dart';
-import '../../core/env_type/domain/entity/env_type_entity.dart';
+import '../../core/env/domain/entity/env_type_entity.dart';
 import '../../core/theme/domain/interface/i_theme.dart';
 import '../../di.dart';
 import 'banners/show_banner.dart';

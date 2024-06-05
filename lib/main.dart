@@ -1,13 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:sc_logger/sc_logger.dart';
+import 'package:ispect/ispect.dart';
 
 import 'app.dart';
 import 'bootstrap.dart';
+import 'core/env/env.dart';
 import 'core/l10n/domain/value_objects/app_locale.dart';
 import 'core/di/module/switcher/domain/value_objects/app_module.dart';
-import 'core/env_type/domain/value_objects/env_type.dart';
+import 'core/env/domain/value_objects/env_type.dart';
 import 'environment.dart';
 
 Future<void> main() async {
@@ -17,19 +18,19 @@ Future<void> main() async {
     module: AppModule.one,
     coreUri: (envType) {
       return switch (envType) {
-        EnvType.prod => Uri.parse('https://dummyjson.com'),
-        EnvType.dev => Uri.parse('https://dummyjson.com'),
+        EnvType.prod => Uri.parse(Env.prodUrl),
+        EnvType.dev => Uri.parse(Env.devUrl),
       };
     },
     moduleUri: (module, envType) {
       return switch (module) {
         AppModule.one => switch (envType) {
-            EnvType.prod => Uri.parse('https://dummyjson.com'),
-            EnvType.dev => Uri.parse('https://dummyjson.com'),
+            EnvType.prod => Uri.parse(Env.oneProdUrl),
+            EnvType.dev => Uri.parse(Env.oneDevUrl),
           },
         AppModule.two => switch (envType) {
-            EnvType.prod => Uri.parse('https://dummyjson.com'),
-            EnvType.dev => Uri.parse('https://dummyjson.com'),
+            EnvType.prod => Uri.parse(Env.twoProdUrl),
+            EnvType.dev => Uri.parse(Env.twoDevUrl),
           },
       };
     },
@@ -41,7 +42,11 @@ Future<void> main() async {
     },
     // ignore: unnecessary_lambdas
     (error, stack) {
-      Log.error(error, stack);
+      talkerWrapper.handle(
+        exception: error,
+        stackTrace: stack,
+        message: 'runZonedGuarded',
+      );
       // if (kReleaseMode && AppDefaults.envType == EnvType.prod) {
       //   FirebaseCrashlytics.instance
       //       .recordError(

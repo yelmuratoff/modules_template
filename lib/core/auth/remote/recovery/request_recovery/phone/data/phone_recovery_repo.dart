@@ -1,5 +1,3 @@
-import 'package:sc_logger/sc_logger.dart';
-
 import '../../../../../../_shared/exceptions/app_exception.dart';
 import '../../../../../../network/gateway/domain/interface/i_gateway.dart';
 import '../../../../_shared/domain/value_objects/auth_response.dart';
@@ -16,7 +14,7 @@ class PhoneRecoveryRepo implements IPhoneRecoveryRepo {
       '/user/recovery/phone',
       data: {'phone': phone},
     );
-    Log.y(response.verbose);
+
     final error = AuthException.fromMap(response.data);
     if (error.isNotEmpty) throw error;
     try {

@@ -8,28 +8,37 @@
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:vector_graphics/vector_graphics.dart';
 
 class $AssetsOneGen {
   const $AssetsOneGen();
 
+  /// Directory path: assets/one/icons
   $AssetsOneIconsGen get icons => const $AssetsOneIconsGen();
+
+  /// Directory path: assets/one/images
   $AssetsOneImagesGen get images => const $AssetsOneImagesGen();
 }
 
 class $AssetsSharedGen {
   const $AssetsSharedGen();
 
-  $AssetsSharedFontsGen get fonts => const $AssetsSharedFontsGen();
+  /// Directory path: assets/shared/icons
   $AssetsSharedIconsGen get icons => const $AssetsSharedIconsGen();
+
+  /// Directory path: assets/shared/images
   $AssetsSharedImagesGen get images => const $AssetsSharedImagesGen();
 }
 
 class $AssetsTwoGen {
   const $AssetsTwoGen();
 
+  /// Directory path: assets/two/icons
   $AssetsTwoIconsGen get icons => const $AssetsTwoIconsGen();
+
+  /// Directory path: assets/two/images
   $AssetsTwoImagesGen get images => const $AssetsTwoImagesGen();
 }
 
@@ -74,10 +83,6 @@ class $AssetsOneImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [avatarPlaceholder, bg, bg2, bgImage, logo];
-}
-
-class $AssetsSharedFontsGen {
-  const $AssetsSharedFontsGen();
 }
 
 class $AssetsSharedIconsGen {
@@ -224,12 +229,16 @@ class $AssetsSharedIconsGen {
 class $AssetsSharedImagesGen {
   const $AssetsSharedImagesGen();
 
+  /// File path: assets/shared/images/icon.png
+  AssetGenImage get icon =>
+      const AssetGenImage('assets/shared/images/icon.png');
+
   /// File path: assets/shared/images/logo_native_splash.png
   AssetGenImage get logoNativeSplash =>
       const AssetGenImage('assets/shared/images/logo_native_splash.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [logoNativeSplash];
+  List<AssetGenImage> get values => [icon, logoNativeSplash];
 }
 
 class $AssetsTwoIconsGen {
@@ -271,9 +280,11 @@ class Assets {
 }
 
 class AssetGenImage {
-  const AssetGenImage(this._assetName);
+  const AssetGenImage(this._assetName, {this.size = null});
 
   final String _assetName;
+
+  final Size? size;
 
   Image image({
     Key? key,
@@ -345,9 +356,20 @@ class AssetGenImage {
 }
 
 class SvgGenImage {
-  const SvgGenImage(this._assetName);
+  const SvgGenImage(
+    this._assetName, {
+    this.size = null,
+  }) : _isVecFormat = false;
+
+  const SvgGenImage.vec(
+    this._assetName, {
+    this.size = null,
+  }) : _isVecFormat = true;
 
   final String _assetName;
+
+  final Size? size;
+  final bool _isVecFormat;
 
   SvgPicture svg({
     Key? key,
@@ -362,19 +384,21 @@ class SvgGenImage {
     WidgetBuilder? placeholderBuilder,
     String? semanticsLabel,
     bool excludeFromSemantics = false,
-    SvgTheme theme = const SvgTheme(),
+    SvgTheme? theme,
     ColorFilter? colorFilter,
     Clip clipBehavior = Clip.hardEdge,
     @deprecated Color? color,
     @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
     @deprecated bool cacheColorFilter = false,
   }) {
-    return SvgPicture.asset(
-      _assetName,
+    return SvgPicture(
+      _isVecFormat
+          ? AssetBytesLoader(_assetName,
+              assetBundle: bundle, packageName: package)
+          : SvgAssetLoader(_assetName,
+              assetBundle: bundle, packageName: package),
       key: key,
       matchTextDirection: matchTextDirection,
-      bundle: bundle,
-      package: package,
       width: width,
       height: height,
       fit: fit,
@@ -384,9 +408,8 @@ class SvgGenImage {
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
       theme: theme,
-      colorFilter: colorFilter,
-      color: color,
-      colorBlendMode: colorBlendMode,
+      colorFilter: colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
     );
