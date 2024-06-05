@@ -63,7 +63,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                             text: 'context.s.onboardingText1',
                                             image: logo,
                                             onTapNext: () {
-                                              DefaultTabController.of(context).animateTo(1);
+                                              DefaultTabController.of(context)
+                                                  .animateTo(1);
                                             },
                                           ),
                                           OnboardingFrame(
@@ -71,7 +72,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                             text: 'context.s.onboardingText2',
                                             image: logo,
                                             onTapNext: () {
-                                              DefaultTabController.of(context).animateTo(2);
+                                              DefaultTabController.of(context)
+                                                  .animateTo(2);
                                             },
                                           ),
                                           OnboardingFrame(
