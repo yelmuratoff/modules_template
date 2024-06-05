@@ -31,6 +31,9 @@ extension RecipeConvert on Recipe {
 abstract class RecipeListConvert {
   static List<Recipe>? from(List? list) {
     if (list == null) return null;
-    return list.map<Recipe?>(RecipeConvert.fromJson).whereType<Recipe>().toList();
+    return list
+        .map<Recipe?>(RecipeConvert.fromJson)
+        .whereType<Recipe>()
+        .toList();
   }
 }

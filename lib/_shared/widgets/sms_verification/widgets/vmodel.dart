@@ -21,7 +21,8 @@ class SmsVerificationVmodel extends Cubit<StateCubitViewPinCode> {
           ),
         ) {
     if (correctCode != null) {
-      this.correctCode = correctCode.split('').map(int.tryParse).toList().asMap();
+      this.correctCode =
+          correctCode.split('').map(int.tryParse).toList().asMap();
     }
   }
 

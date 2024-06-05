@@ -29,7 +29,8 @@ class _Fields {
         currentPasswordField.data.validate,
         newPasswordField.data.validate,
         confPasswordField.data.validate,
-        if (newPasswordField.data.controller.text != confPasswordField.data.controller.text)
+        if (newPasswordField.data.controller.text !=
+            confPasswordField.data.controller.text)
           {
             newPasswordField.data.showErrors([S.current.passwordsDontMatch]),
           },

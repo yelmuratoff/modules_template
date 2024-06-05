@@ -36,9 +36,11 @@ class RecipesScreen extends StatelessWidget {
                   children: [
                     Text('Difficulty: ${item.difficulty ?? context.s.noData}'),
                     Text(
-                        'Calories: ${item.caloriesPerServing ?? context.s.noData}'),
+                      'Calories: ${item.caloriesPerServing ?? context.s.noData}',
+                    ),
                     Text(
-                        'Cook time: ${item.cookTimeMinutes ?? context.s.noData}'),
+                      'Cook time: ${item.cookTimeMinutes ?? context.s.noData}',
+                    ),
                   ],
                 ),
                 onTap: () {

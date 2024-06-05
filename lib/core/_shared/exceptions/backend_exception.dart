@@ -9,7 +9,8 @@ class BackendException extends AppException {
   final Set<String> messages;
 
   @override
-  String? get debugMessage => messages.isNotEmpty ? messages.first : S.current.somethingWentWrong;
+  String? get debugMessage =>
+      messages.isNotEmpty ? messages.first : S.current.somethingWentWrong;
 
   @override
   List<Object?> get props => [messages, debugMessage];

@@ -56,7 +56,8 @@ class $AssetsOneImagesGen {
   const $AssetsOneImagesGen();
 
   /// File path: assets/one/images/avatar_placeholder.jpg
-  AssetGenImage get avatarPlaceholder => const AssetGenImage('assets/one/images/avatar_placeholder.jpg');
+  AssetGenImage get avatarPlaceholder =>
+      const AssetGenImage('assets/one/images/avatar_placeholder.jpg');
 
   /// File path: assets/one/images/bg.png
   AssetGenImage get bg => const AssetGenImage('assets/one/images/bg.png');
@@ -65,7 +66,8 @@ class $AssetsOneImagesGen {
   AssetGenImage get bg2 => const AssetGenImage('assets/one/images/bg2.png');
 
   /// File path: assets/one/images/bg_image.jpg
-  AssetGenImage get bgImage => const AssetGenImage('assets/one/images/bg_image.jpg');
+  AssetGenImage get bgImage =>
+      const AssetGenImage('assets/one/images/bg_image.jpg');
 
   /// File path: assets/one/images/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/one/images/logo.png');
@@ -85,13 +87,15 @@ class $AssetsSharedIconsGen {
   SvgGenImage get apple => const SvgGenImage('assets/shared/icons/apple.svg');
 
   /// File path: assets/shared/icons/backspace.svg
-  SvgGenImage get backspace => const SvgGenImage('assets/shared/icons/backspace.svg');
+  SvgGenImage get backspace =>
+      const SvgGenImage('assets/shared/icons/backspace.svg');
 
   /// File path: assets/shared/icons/bell.svg
   SvgGenImage get bell => const SvgGenImage('assets/shared/icons/bell.svg');
 
   /// File path: assets/shared/icons/bell_dot.svg
-  SvgGenImage get bellDot => const SvgGenImage('assets/shared/icons/bell_dot.svg');
+  SvgGenImage get bellDot =>
+      const SvgGenImage('assets/shared/icons/bell_dot.svg');
 
   /// File path: assets/shared/icons/cancel.svg
   SvgGenImage get cancel => const SvgGenImage('assets/shared/icons/cancel.svg');
@@ -100,19 +104,24 @@ class $AssetsSharedIconsGen {
   SvgGenImage get check => const SvgGenImage('assets/shared/icons/check.svg');
 
   /// File path: assets/shared/icons/check_outlined.svg
-  SvgGenImage get checkOutlined => const SvgGenImage('assets/shared/icons/check_outlined.svg');
+  SvgGenImage get checkOutlined =>
+      const SvgGenImage('assets/shared/icons/check_outlined.svg');
 
   /// File path: assets/shared/icons/chevron_down.svg
-  SvgGenImage get chevronDown => const SvgGenImage('assets/shared/icons/chevron_down.svg');
+  SvgGenImage get chevronDown =>
+      const SvgGenImage('assets/shared/icons/chevron_down.svg');
 
   /// File path: assets/shared/icons/chevron_left.svg
-  SvgGenImage get chevronLeft => const SvgGenImage('assets/shared/icons/chevron_left.svg');
+  SvgGenImage get chevronLeft =>
+      const SvgGenImage('assets/shared/icons/chevron_left.svg');
 
   /// File path: assets/shared/icons/chevron_right.svg
-  SvgGenImage get chevronRight => const SvgGenImage('assets/shared/icons/chevron_right.svg');
+  SvgGenImage get chevronRight =>
+      const SvgGenImage('assets/shared/icons/chevron_right.svg');
 
   /// File path: assets/shared/icons/chevron_up.svg
-  SvgGenImage get chevronUp => const SvgGenImage('assets/shared/icons/chevron_up.svg');
+  SvgGenImage get chevronUp =>
+      const SvgGenImage('assets/shared/icons/chevron_up.svg');
 
   /// File path: assets/shared/icons/close.svg
   SvgGenImage get close => const SvgGenImage('assets/shared/icons/close.svg');
@@ -124,49 +133,59 @@ class $AssetsSharedIconsGen {
   SvgGenImage get email => const SvgGenImage('assets/shared/icons/email.svg');
 
   /// File path: assets/shared/icons/error_general.svg
-  SvgGenImage get errorGeneral => const SvgGenImage('assets/shared/icons/error_general.svg');
+  SvgGenImage get errorGeneral =>
+      const SvgGenImage('assets/shared/icons/error_general.svg');
 
   /// File path: assets/shared/icons/eye.svg
   SvgGenImage get eye => const SvgGenImage('assets/shared/icons/eye.svg');
 
   /// File path: assets/shared/icons/eye_shut.svg
-  SvgGenImage get eyeShut => const SvgGenImage('assets/shared/icons/eye_shut.svg');
+  SvgGenImage get eyeShut =>
+      const SvgGenImage('assets/shared/icons/eye_shut.svg');
 
   /// File path: assets/shared/icons/facebook.svg
-  SvgGenImage get facebook => const SvgGenImage('assets/shared/icons/facebook.svg');
+  SvgGenImage get facebook =>
+      const SvgGenImage('assets/shared/icons/facebook.svg');
 
   /// File path: assets/shared/icons/faceid.svg
   SvgGenImage get faceid => const SvgGenImage('assets/shared/icons/faceid.svg');
 
   /// File path: assets/shared/icons/fingerprint.svg
-  SvgGenImage get fingerprint => const SvgGenImage('assets/shared/icons/fingerprint.svg');
+  SvgGenImage get fingerprint =>
+      const SvgGenImage('assets/shared/icons/fingerprint.svg');
 
   /// File path: assets/shared/icons/google.svg
   SvgGenImage get google => const SvgGenImage('assets/shared/icons/google.svg');
 
   /// File path: assets/shared/icons/info_hex.svg
-  SvgGenImage get infoHex => const SvgGenImage('assets/shared/icons/info_hex.svg');
+  SvgGenImage get infoHex =>
+      const SvgGenImage('assets/shared/icons/info_hex.svg');
 
   /// File path: assets/shared/icons/language.svg
-  SvgGenImage get language => const SvgGenImage('assets/shared/icons/language.svg');
+  SvgGenImage get language =>
+      const SvgGenImage('assets/shared/icons/language.svg');
 
   /// File path: assets/shared/icons/menu.svg
   SvgGenImage get menu => const SvgGenImage('assets/shared/icons/menu.svg');
 
   /// File path: assets/shared/icons/password.svg
-  SvgGenImage get password => const SvgGenImage('assets/shared/icons/password.svg');
+  SvgGenImage get password =>
+      const SvgGenImage('assets/shared/icons/password.svg');
 
   /// File path: assets/shared/icons/settings.svg
-  SvgGenImage get settings => const SvgGenImage('assets/shared/icons/settings.svg');
+  SvgGenImage get settings =>
+      const SvgGenImage('assets/shared/icons/settings.svg');
 
   /// File path: assets/shared/icons/signout.svg
-  SvgGenImage get signout => const SvgGenImage('assets/shared/icons/signout.svg');
+  SvgGenImage get signout =>
+      const SvgGenImage('assets/shared/icons/signout.svg');
 
   /// File path: assets/shared/icons/theme.svg
   SvgGenImage get theme => const SvgGenImage('assets/shared/icons/theme.svg');
 
   /// File path: assets/shared/icons/trash_outlined.svg
-  SvgGenImage get trashOutlined => const SvgGenImage('assets/shared/icons/trash_outlined.svg');
+  SvgGenImage get trashOutlined =>
+      const SvgGenImage('assets/shared/icons/trash_outlined.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [
@@ -206,7 +225,8 @@ class $AssetsSharedImagesGen {
   const $AssetsSharedImagesGen();
 
   /// File path: assets/shared/images/logo_native_splash.png
-  AssetGenImage get logoNativeSplash => const AssetGenImage('assets/shared/images/logo_native_splash.png');
+  AssetGenImage get logoNativeSplash =>
+      const AssetGenImage('assets/shared/images/logo_native_splash.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [logoNativeSplash];
@@ -225,7 +245,8 @@ class $AssetsTwoIconsGen {
   SvgGenImage get screen2 => const SvgGenImage('assets/two/icons/screen_2.svg');
 
   /// File path: assets/two/icons/user_circle.svg
-  SvgGenImage get userCircle => const SvgGenImage('assets/two/icons/user_circle.svg');
+  SvgGenImage get userCircle =>
+      const SvgGenImage('assets/two/icons/user_circle.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [home, profile, screen2, userCircle];

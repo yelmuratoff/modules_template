@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../../../../../_shared/fonts.gen.dart';
 import '../../../../../core/di/module/switcher/domain/value_objects/app_module.dart';

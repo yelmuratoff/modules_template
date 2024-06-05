@@ -58,7 +58,8 @@ class OnboardingFrame extends StatelessWidget {
                   Row(
                     children: List.generate(
                       3,
-                      (index) => this.index == index ? const _Dash() : const _Dot(),
+                      (index) =>
+                          this.index == index ? const _Dash() : const _Dot(),
                     ),
                   ),
                   ElevatedButton(

@@ -81,7 +81,8 @@ class StateCubitViewPinCode {
   final Map<int, int?> pin;
 
   @override
-  String toString() => 'StateCubitViewPinCode(errorMessage: $errorMessage, pin: $pin)';
+  String toString() =>
+      'StateCubitViewPinCode(errorMessage: $errorMessage, pin: $pin)';
 
   bool get isPinReady => pin.entries.every((item) => item.value != null);
 }

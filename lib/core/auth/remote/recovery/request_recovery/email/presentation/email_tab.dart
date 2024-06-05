@@ -92,7 +92,8 @@ class _EmailTabState extends State<EmailTab> with EmailRecoveryMixin {
                     );
                 }
               }
-              if (state is RecoveryUnauthorized && state.resp?.timeout != null) {
+              if (state is RecoveryUnauthorized &&
+                  state.resp?.timeout != null) {
                 showSmsUi(
                   context,
                   state.resp!,

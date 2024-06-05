@@ -4,7 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'states.dart';
 
 class RootScreenController extends Cubit<PrimaryTabsState> {
-  RootScreenController({required int initial}) : super(PrimaryTabsState(initial));
+  RootScreenController({required int initial})
+      : super(PrimaryTabsState(initial));
 
   List<GlobalKey<NavigatorState>> navigatorKeys = [
     GlobalKey<NavigatorState>(),
@@ -12,7 +13,8 @@ class RootScreenController extends Cubit<PrimaryTabsState> {
     GlobalKey<NavigatorState>(),
   ];
 
-  GlobalKey<NavigatorState> get currentNavigatorKey => navigatorKeys[state.index];
+  GlobalKey<NavigatorState> get currentNavigatorKey =>
+      navigatorKeys[state.index];
 
   void switchToTab(
     int index, {

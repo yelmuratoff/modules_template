@@ -92,7 +92,8 @@ class AuthorizedProfile extends StatelessWidget {
                     : CachedNetworkImage(
                         fit: BoxFit.cover,
                         imageUrl: user.image ?? '',
-                        placeholder: (_, __) => const AppProgressIndicator(widthFactor: 0.5),
+                        placeholder: (_, __) =>
+                            const AppProgressIndicator(widthFactor: 0.5),
                         errorWidget: (_, url, error) {
                           return Assets.one.images.bgImage.image(
                             fit: BoxFit.cover,

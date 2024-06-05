@@ -56,7 +56,8 @@ Future<T?> showAppDialogExtraCustom<T>(
                                       Expanded(child: title),
                                     ],
                                   ),
-                                if ((title != null) && body != null) const SizedBox(height: 16),
+                                if ((title != null) && body != null)
+                                  const SizedBox(height: 16),
                                 if (body != null)
                                   Row(
                                     children: [

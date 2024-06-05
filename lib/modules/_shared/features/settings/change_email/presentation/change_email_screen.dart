@@ -23,7 +23,8 @@ class ChangeEmailScreen extends StatefulWidget {
   State<ChangeEmailScreen> createState() => _ChangeEmailScreenState();
 }
 
-class _ChangeEmailScreenState extends State<ChangeEmailScreen> with EmailChangeMixin {
+class _ChangeEmailScreenState extends State<ChangeEmailScreen>
+    with EmailChangeMixin {
   final email = EmailTextfield(
     data: EmailTextfieldData(
       autofocus: true,
@@ -80,7 +81,8 @@ class _ChangeEmailScreenState extends State<ChangeEmailScreen> with EmailChangeM
                             style: context.button.elevated1,
                             onPressed: () {
                               FocusScope.of(context).unfocus();
-                              final state = context.read<EmailChangeEntity>().state;
+                              final state =
+                                  context.read<EmailChangeEntity>().state;
                               var remainingSeconds = 0;
                               if (state is ChangeCode) {
                                 remainingSeconds = state.resp.code;
@@ -92,7 +94,8 @@ class _ChangeEmailScreenState extends State<ChangeEmailScreen> with EmailChangeM
                                 );
                               } else {
                                 if (email.data.validate) {
-                                  BlocProvider.of<EmailChangeEntity>(context).add(
+                                  BlocProvider.of<EmailChangeEntity>(context)
+                                      .add(
                                     RequestChange(
                                       email.data.controller.text,
                                     ),

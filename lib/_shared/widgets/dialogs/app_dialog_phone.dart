@@ -86,7 +86,8 @@ class _AppDialogPhoneState extends State<_AppDialogPhone> {
                       behavior: HitTestBehavior.opaque,
                       onTap: () {
                         phone.data.focusNode.requestFocus();
-                        phone.data.controller.selection = TextSelection.fromPosition(
+                        phone.data.controller.selection =
+                            TextSelection.fromPosition(
                           TextPosition(
                             offset: phone.data.controller.text.length,
                           ),

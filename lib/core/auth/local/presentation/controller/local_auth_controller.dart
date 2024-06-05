@@ -57,7 +57,8 @@ class LocalAuthController extends Cubit<LocalAuthVmState> {
 
   void verification(LocalAuthDto dto) => _verification(dto, emit);
 
-  void biometricsVerification(LocalAuthDto dto) => _biometricsVerification(dto, emit);
+  void biometricsVerification(LocalAuthDto dto) =>
+      _biometricsVerification(dto, emit);
 
   void biometricsSetup(LocalAuthDto dto) => _biometricsSetup(dto, emit);
 }

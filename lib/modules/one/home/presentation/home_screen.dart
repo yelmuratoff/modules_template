@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/di/module/switcher/domain/value_objects/app_module.dart';
-import '../../../../core/di/module/switcher/presentation/module_sheet/module_button.dart';
 import '../../../../core/l10n/l10n_helper.dart';
 import '../../../../core/theme/domain/interface/i_theme.dart';
 import 'widgets/header.dart';

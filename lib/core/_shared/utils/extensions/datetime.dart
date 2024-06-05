@@ -57,7 +57,9 @@ extension DateTimeCoreX on DateTime? {
 
   bool isSameDay(DateTime? other) {
     if (this == null || other == null) return false;
-    return this!.day == other.day && this!.month == other.month && this!.year == other.year;
+    return this!.day == other.day &&
+        this!.month == other.month &&
+        this!.year == other.year;
   }
 
   bool isDayBefore(DateTime? other) {

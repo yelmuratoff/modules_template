@@ -21,7 +21,8 @@ class ViewBiometricsSetup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-    final type = context.read<LocalAuthController>().availableBiometrics?.current;
+    final type =
+        context.read<LocalAuthController>().availableBiometrics?.current;
     return Column(
       children: [
         const SizedBox(height: 5),

@@ -13,7 +13,8 @@ class AppUnfocuser extends StatelessWidget {
       child: child,
       onTap: () {
         final currentFocus = FocusScope.of(context);
-        if (!currentFocus.hasPrimaryFocus && currentFocus.focusedChild != null) {
+        if (!currentFocus.hasPrimaryFocus &&
+            currentFocus.focusedChild != null) {
           // currentFocus.focusedChild!.unfocus();
           FocusManager.instance.primaryFocus?.unfocus();
         }

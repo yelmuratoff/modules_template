@@ -28,13 +28,18 @@ class RecipeDetailsScreen extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: MediaQuery.of(context).size.width / 3,
-                backgroundImage: CachedNetworkImageProvider(data.item.image ?? ''),
+                backgroundImage:
+                    CachedNetworkImageProvider(data.item.image ?? ''),
               ),
               const SizedBox(height: 16),
               Text(data.item.name ?? context.s.noData),
               Text('Difficulty: ${data.item.difficulty ?? context.s.noData}'),
-              Text('Calories: ${data.item.caloriesPerServing ?? context.s.noData}'),
-              Text('Cook time: ${data.item.cookTimeMinutes ?? context.s.noData}'),
+              Text(
+                'Calories: ${data.item.caloriesPerServing ?? context.s.noData}',
+              ),
+              Text(
+                'Cook time: ${data.item.cookTimeMinutes ?? context.s.noData}',
+              ),
             ],
           );
         },

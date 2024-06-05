@@ -5,7 +5,8 @@ import '../value_objects/settings.dart';
 sealed class SettingsState {
   const SettingsState();
 
-  Settings? get settings => this is SettingsData ? (this as SettingsData).settings : null;
+  Settings? get settings =>
+      this is SettingsData ? (this as SettingsData).settings : null;
 }
 
 class SettingsIdle extends SettingsState {}

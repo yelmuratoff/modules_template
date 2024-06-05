@@ -23,7 +23,8 @@ class ChangePhoneScreen extends StatefulWidget {
   State<ChangePhoneScreen> createState() => _ChangePhoneScreenState();
 }
 
-class _ChangePhoneScreenState extends State<ChangePhoneScreen> with PhoneChangeMixin {
+class _ChangePhoneScreenState extends State<ChangePhoneScreen>
+    with PhoneChangeMixin {
   final phone = PhoneTextfield(
     data: PhoneTextfieldData(
       autofocus: true,
@@ -80,7 +81,8 @@ class _ChangePhoneScreenState extends State<ChangePhoneScreen> with PhoneChangeM
                             style: context.button.elevated1,
                             onPressed: () {
                               FocusScope.of(context).unfocus();
-                              final state = context.read<PhoneChangeEntity>().state;
+                              final state =
+                                  context.read<PhoneChangeEntity>().state;
                               var remainingSeconds = 0;
                               if (state is ChangeCode) {
                                 remainingSeconds = state.resp.code;
@@ -92,7 +94,8 @@ class _ChangePhoneScreenState extends State<ChangePhoneScreen> with PhoneChangeM
                                 );
                               } else {
                                 if (phone.data.validate) {
-                                  BlocProvider.of<PhoneChangeEntity>(context).add(
+                                  BlocProvider.of<PhoneChangeEntity>(context)
+                                      .add(
                                     RequestChange(
                                       phone.data.controller.text,
                                     ),

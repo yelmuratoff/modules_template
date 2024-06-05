@@ -51,7 +51,9 @@ class ViewPincodeSetupAsk extends StatelessWidget {
                       style: context.button.elevated1,
                       child: Text(context.s.use),
                       onPressed: () {
-                        context.read<LocalAuthController>().pinSetupSetCode(state.dto);
+                        context
+                            .read<LocalAuthController>()
+                            .pinSetupSetCode(state.dto);
                       },
                     ),
                   ),

@@ -38,7 +38,9 @@ class AppTextfieldState extends State<AppTextfield> {
   void initState() {
     vmodel.focusNode.addListener(
       () {
-        if (mounted && vmodel.focusNode.canRequestFocus && !vmodel.focusNode.hasFocus) {
+        if (mounted &&
+            vmodel.focusNode.canRequestFocus &&
+            !vmodel.focusNode.hasFocus) {
           if (widget.data.validateOnFocusLost) {
             vmodel
               ..autovalidationOn = true
@@ -100,7 +102,9 @@ class AppTextfieldState extends State<AppTextfield> {
     return ValueListenableBuilder<List<String>>(
       valueListenable: vmodel.errors,
       builder: (context, errorsList, _) {
-        var fillColor = errorsList.isEmpty ? context.color.background : context.color.errorBg;
+        var fillColor = errorsList.isEmpty
+            ? context.color.background
+            : context.color.errorBg;
         if (vmodel.enabled == false) {
           fillColor = context.color.grey100;
         }
@@ -129,7 +133,9 @@ class AppTextfieldState extends State<AppTextfield> {
               enabled: vmodel.enabled,
               inputFormatters: vmodel.inputFormatters,
               keyboardType: vmodel.keyboardType,
-              textInputAction: vmodel.nextFocus == null ? vmodel.textInputAction : TextInputAction.next,
+              textInputAction: vmodel.nextFocus == null
+                  ? vmodel.textInputAction
+                  : TextInputAction.next,
               maxLength: vmodel.maxLength,
               minLines: vmodel.minLines,
               maxLines: vmodel.maxLines,
@@ -146,8 +152,10 @@ class AppTextfieldState extends State<AppTextfield> {
               decoration: InputDecoration(
                 suffixText: vmodel.suffixText,
                 suffixStyle: context.text.s14w500,
-                suffixIcon: suffixButton?.call(errorsList.isEmpty ? null : context.color.error),
-                prefixIcon: vmodel.prefixIcon?.call(errorsList.isEmpty ? null : context.color.error),
+                suffixIcon: suffixButton
+                    ?.call(errorsList.isEmpty ? null : context.color.error),
+                prefixIcon: vmodel.prefixIcon
+                    ?.call(errorsList.isEmpty ? null : context.color.error),
                 fillColor: fillColor,
                 filled: true,
                 isDense: true,
@@ -180,7 +188,9 @@ class AppTextfieldState extends State<AppTextfield> {
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide(
-                    color: errorsList.isNotEmpty ? context.color.error : context.color.accent,
+                    color: errorsList.isNotEmpty
+                        ? context.color.error
+                        : context.color.accent,
                     width: 2,
                   ),
                   gapPadding: 0,

@@ -23,7 +23,8 @@ class SignInButton extends StatelessWidget {
           child: MultiValueListenableBuilder<bool?>(
             valueListenables: listenables,
             builder: (context, values, _) {
-              final isValid = values.isNotEmpty && values.every((item) => item == true);
+              final isValid =
+                  values.isNotEmpty && values.every((item) => item == true);
               return ElevatedButton(
                 style: context.button.elevated1,
                 onPressed: isValid ? onPressed : null,

@@ -47,7 +47,9 @@ Future<bool?> showSmsSheet(
         },
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+            padding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).viewInsets.bottom,
+            ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -100,12 +102,16 @@ Future<bool?> showSmsSheet(
                         }
                         return AnimatedSwitcher(
                           duration: const Duration(milliseconds: 200),
-                          transitionBuilder: (child, animation) => SizeTransition(
+                          transitionBuilder: (child, animation) =>
+                              SizeTransition(
                             axisAlignment: -1,
                             sizeFactor: animation,
                             child: child,
                           ),
-                          layoutBuilder: (Widget? currentChild, List<Widget> previousChildren) {
+                          layoutBuilder: (
+                            Widget? currentChild,
+                            List<Widget> previousChildren,
+                          ) {
                             return Column(
                               children: <Widget>[
                                 if (currentChild != null) currentChild,

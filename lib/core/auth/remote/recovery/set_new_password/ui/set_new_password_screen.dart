@@ -80,13 +80,21 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                                         style: context.button.elevated1,
                                         onPressed: isValidated == true
                                             ? () {
-                                                ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
-                                                FocusScope.of(context).unfocus();
+                                                ScaffoldMessenger.of(context)
+                                                    .hideCurrentMaterialBanner();
+                                                FocusScope.of(context)
+                                                    .unfocus();
                                                 password.data.clearErrors;
-                                                context.read<ChangePasswordEntity>().changePassword(
+                                                context
+                                                    .read<
+                                                        ChangePasswordEntity>()
+                                                    .changePassword(
                                                       uid: widget.resp.uid,
-                                                      code: int.parse(widget.resp.code),
-                                                      password: password.data.controller.text,
+                                                      code: int.parse(
+                                                        widget.resp.code,
+                                                      ),
+                                                      password: password
+                                                          .data.controller.text,
                                                     );
                                               }
                                             : null,

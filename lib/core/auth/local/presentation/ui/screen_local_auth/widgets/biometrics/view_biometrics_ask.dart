@@ -21,7 +21,8 @@ class ViewBiometricsSetupAsk extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-    final type = context.read<LocalAuthController>().availableBiometrics?.current;
+    final type =
+        context.read<LocalAuthController>().availableBiometrics?.current;
     return Column(
       children: [
         const SizedBox(height: 5),
@@ -52,7 +53,8 @@ class ViewBiometricsSetupAsk extends StatelessWidget {
                           margin: const EdgeInsets.only(right: 20),
                           child: SvgPicture.asset(
                             switch (type) {
-                              BiometricsType.faceId => Assets.shared.icons.faceid.path,
+                              BiometricsType.faceId =>
+                                Assets.shared.icons.faceid.path,
                               _ => Assets.shared.icons.fingerprint.path,
                             },
                             width: 20,
@@ -64,7 +66,9 @@ class ViewBiometricsSetupAsk extends StatelessWidget {
                         ),
                         Expanded(
                           child: Text(
-                            type == BiometricsType.faceId ? context.s.useBiometry : context.s.useFingerprints,
+                            type == BiometricsType.faceId
+                                ? context.s.useBiometry
+                                : context.s.useFingerprints,
                             style: context.text.hs16w700,
                           ),
                         ),
@@ -78,7 +82,9 @@ class ViewBiometricsSetupAsk extends StatelessWidget {
                             style: context.button.elevated1,
                             child: Text(context.s.allow),
                             onPressed: () {
-                              context.read<LocalAuthController>().biometricsSetup(
+                              context
+                                  .read<LocalAuthController>()
+                                  .biometricsSetup(
                                     state.dto.copyWith(
                                       skipAsk: true,
                                     ),

@@ -90,7 +90,8 @@ class _PhoneTabState extends State<PhoneTab> with PhoneRecoveryMixin {
                     );
                 }
               }
-              if (state is RecoveryUnauthorized && state.resp?.timeout != null) {
+              if (state is RecoveryUnauthorized &&
+                  state.resp?.timeout != null) {
                 showSmsUi(
                   context,
                   state.resp!,

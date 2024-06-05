@@ -1,5 +1,4 @@
 import 'package:collection/collection.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../di/module/switcher/domain/value_objects/app_module.dart';

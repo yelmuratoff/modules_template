@@ -40,6 +40,9 @@ extension ProductConvert on Product {
 abstract class ProductsListConvert {
   static List<Product>? from(List? list) {
     if (list == null) return null;
-    return list.map<Product?>(ProductConvert.fromJson).whereType<Product>().toList();
+    return list
+        .map<Product?>(ProductConvert.fromJson)
+        .whereType<Product>()
+        .toList();
   }
 }

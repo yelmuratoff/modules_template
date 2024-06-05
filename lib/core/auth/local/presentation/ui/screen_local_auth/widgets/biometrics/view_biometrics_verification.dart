@@ -21,7 +21,8 @@ class ViewBiometricsVerification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-    final type = context.read<LocalAuthController>().availableBiometrics?.current;
+    final type =
+        context.read<LocalAuthController>().availableBiometrics?.current;
     return Column(
       children: [
         const SizedBox(height: 5),
@@ -80,7 +81,9 @@ class ViewBiometricsVerification extends StatelessWidget {
                         style: context.button.elevated1,
                         child: Text(context.s.tryAgain),
                         onPressed: () {
-                          context.read<LocalAuthController>().biometricsVerification(
+                          context
+                              .read<LocalAuthController>()
+                              .biometricsVerification(
                                 state.dto,
                               );
                         },
@@ -88,7 +91,8 @@ class ViewBiometricsVerification extends StatelessWidget {
                     ],
                   ),
                   if (state.dto.isVisibleButtonSwitchToPinOnBiometricsError &&
-                      context.read<LocalAuthController>().entity.state.pin != null)
+                      context.read<LocalAuthController>().entity.state.pin !=
+                          null)
                     Padding(
                       padding: const EdgeInsets.only(top: 20),
                       child: Row(
@@ -98,7 +102,9 @@ class ViewBiometricsVerification extends StatelessWidget {
                             style: context.button.text1,
                             child: Text(context.s.enterPincode),
                             onPressed: () {
-                              context.read<LocalAuthController>().pinVerification(
+                              context
+                                  .read<LocalAuthController>()
+                                  .pinVerification(
                                     state.dto,
                                   );
                             },

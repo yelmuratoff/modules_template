@@ -46,7 +46,9 @@ class PinPadWidget extends StatelessWidget {
                             context.s.forgotPin,
                           ),
                           onPressed: () {
-                            context.read<LocalAuthController>().pinForgot(state.dto);
+                            context
+                                .read<LocalAuthController>()
+                                .pinForgot(state.dto);
                           },
                         ),
                       ),
@@ -66,7 +68,8 @@ class PinPadWidget extends StatelessWidget {
                       child: Builder(
                         builder: (context) {
                           final repo = appDi.core.get<LocalAuthEntity>();
-                          final isBiometricsOn = repo.state.isBiometricsOn ?? false;
+                          final isBiometricsOn =
+                              repo.state.isBiometricsOn ?? false;
                           return Keypad(
                             onAddDigit: (digit) {
                               context.read<CubitViewPinCode>().addDigit(digit);
@@ -95,7 +98,9 @@ class PinPadWidget extends StatelessWidget {
                                     margin: const EdgeInsets.all(10),
                                     padding: const EdgeInsets.all(10),
                                     onPressed: (context) {
-                                      context.read<LocalAuthController>().biometricsVerification(
+                                      context
+                                          .read<LocalAuthController>()
+                                          .biometricsVerification(
                                             state.dto.copyWith(),
                                           );
                                     },

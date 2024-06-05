@@ -33,7 +33,8 @@ class LocalAuthDto {
 
     return other.canPop == canPop &&
         other.errorMessage == errorMessage &&
-        other.isVisibleButtonSwitchToPinOnBiometricsError == isVisibleButtonSwitchToPinOnBiometricsError &&
+        other.isVisibleButtonSwitchToPinOnBiometricsError ==
+            isVisibleButtonSwitchToPinOnBiometricsError &&
         other.key == key &&
         setEquals(other.modes, modes) &&
         other.pin == pin &&
@@ -74,11 +75,13 @@ class LocalAuthDto {
       canPop: canPop ?? this.canPop,
       errorMessage: errorMessage ?? this.errorMessage,
       isVisibleButtonSwitchToPinOnBiometricsError:
-          isVisibleButtonSwitchToPinOnBiometricsError ?? this.isVisibleButtonSwitchToPinOnBiometricsError,
+          isVisibleButtonSwitchToPinOnBiometricsError ??
+              this.isVisibleButtonSwitchToPinOnBiometricsError,
       modes: modes ?? this.modes,
       pin: pin ?? this.pin,
       skipAsk: skipAsk ?? this.skipAsk,
-      switchToPinOnBiometricsError: switchToPinOnBiometricsError ?? this.switchToPinOnBiometricsError,
+      switchToPinOnBiometricsError:
+          switchToPinOnBiometricsError ?? this.switchToPinOnBiometricsError,
       timeout: timeout ?? this.timeout,
     );
   }

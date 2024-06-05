@@ -24,7 +24,8 @@ part 'parts/available_biometrics.dart';
 part 'parts/init.dart';
 part 'parts/update.dart';
 
-class LocalAuthEntity extends Cubit<LocalAuthState> with WidgetsBindingObserver, AvailableBiometrics, Authenticate {
+class LocalAuthEntity extends Cubit<LocalAuthState>
+    with WidgetsBindingObserver, AvailableBiometrics, Authenticate {
   LocalAuthEntity({
     required ISecureStorageRepo local,
     this.idleDuration,
@@ -44,10 +45,12 @@ class LocalAuthEntity extends Cubit<LocalAuthState> with WidgetsBindingObserver,
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (idleDuration == null) return;
     //foreground
-    if (state == AppLifecycleState.detached || state == AppLifecycleState.resumed) {
+    if (state == AppLifecycleState.detached ||
+        state == AppLifecycleState.resumed) {
       timer?.cancel();
       //background
-    } else if (state == AppLifecycleState.inactive || state == AppLifecycleState.paused) {
+    } else if (state == AppLifecycleState.inactive ||
+        state == AppLifecycleState.paused) {
       timer = Timer(
         idleDuration!,
         () {

@@ -116,13 +116,17 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                       }
                       if (state is ChangeError) {
                         if (state.error is AuthException) {
-                          final newPassErrors = (state.error as AuthException).password;
+                          final newPassErrors =
+                              (state.error as AuthException).password;
                           if (newPassErrors != null) {
-                            fields.newPasswordField.data.showErrors(newPassErrors);
+                            fields.newPasswordField.data
+                                .showErrors(newPassErrors);
                           }
-                          final cPassErrors = (state.error as AuthException).cPassword;
+                          final cPassErrors =
+                              (state.error as AuthException).cPassword;
                           if (cPassErrors != null) {
-                            fields.currentPasswordField.data.showErrors(cPassErrors);
+                            fields.currentPasswordField.data
+                                .showErrors(cPassErrors);
                           }
                           if (newPassErrors == null && cPassErrors == null) {
                             ShowBanner.error(
@@ -160,8 +164,10 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                             if (fields.isValidated) {
                               BlocProvider.of<PassChangeEntity>(context).add(
                                 DoChange(
-                                  currentPassword: fields.currentPasswordField.data.controller.text,
-                                  newPassword: fields.newPasswordField.data.controller.text,
+                                  currentPassword: fields.currentPasswordField
+                                      .data.controller.text,
+                                  newPassword: fields
+                                      .newPasswordField.data.controller.text,
                                 ),
                               );
                             }

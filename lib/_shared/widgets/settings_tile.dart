@@ -73,7 +73,8 @@ class SettingsTile extends StatelessWidget {
                 ),
               ),
             ),
-            if (type == SettingsTileType.chevron) Assets.shared.icons.chevronRight.svg(),
+            if (type == SettingsTileType.chevron)
+              Assets.shared.icons.chevronRight.svg(),
             if (type == SettingsTileType.switcher)
               Switch(
                 value: value ?? false,

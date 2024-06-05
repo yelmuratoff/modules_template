@@ -39,7 +39,8 @@ abstract final class TwoAuthBanner {
               icon: const Icon(Icons.close),
               color: theme.extension<IColors>()!.background,
               onPressed: () {
-                AppGlobalKeys.scaffoldMessenger.currentState?.hideCurrentMaterialBanner();
+                AppGlobalKeys.scaffoldMessenger.currentState
+                    ?.hideCurrentMaterialBanner();
               },
             ),
           ],
@@ -53,7 +54,8 @@ abstract final class TwoAuthBanner {
           TextButton(
             style: theme.extension<IButtonStyles>()!.text3,
             onPressed: () {
-              AppGlobalKeys.scaffoldMessenger.currentState?.hideCurrentMaterialBanner();
+              AppGlobalKeys.scaffoldMessenger.currentState
+                  ?.hideCurrentMaterialBanner();
               showExitConfirmation(
                 onConfirm: () {
                   AppGlobalKeys.navigator.currentState?.use.pushSignOutScreen();

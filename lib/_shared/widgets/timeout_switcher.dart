@@ -70,7 +70,9 @@ class _TimeoutSwitcherState extends State<TimeoutSwitcher> {
           ],
         );
       },
-      child: secondsRemaining != null ? widget.before(secondsRemaining!) : widget.after,
+      child: secondsRemaining != null
+          ? widget.before(secondsRemaining!)
+          : widget.after,
     );
   }
 }

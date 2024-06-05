@@ -414,7 +414,8 @@ class PhoneCountryData {
   @override
   String toString() {
     // ignore: prefer_adjacent_string_concatenation
-    return '[PhoneCountryData(country: $country,' + ' phoneCode: $phoneCode, countryCode: $countryCode)]';
+    return '[PhoneCountryData(country: $country,' +
+        ' phoneCode: $phoneCode, countryCode: $countryCode)]';
   }
 }
 
@@ -433,7 +434,10 @@ class _PhoneCodes {
     if (subscringLength < 1) return null;
     final phoneCode = phone.substring(0, subscringLength);
 
-    final rawData = _data.firstWhere((data) => toNumericString(data!['phoneCode']) == phoneCode, orElse: () => null);
+    final rawData = _data.firstWhere(
+      (data) => toNumericString(data!['phoneCode']) == phoneCode,
+      orElse: () => null,
+    );
     if (rawData != null) {
       return PhoneCountryData.fromMap(rawData);
     }

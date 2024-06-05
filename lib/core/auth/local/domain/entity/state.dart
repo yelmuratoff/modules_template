@@ -40,5 +40,6 @@ class LocalAuthState extends Equatable {
   }
 
   @override
-  List<Object?> get props => [isBiometricsOn, isInitCompleted, pin, isAuthorized];
+  List<Object?> get props =>
+      [isBiometricsOn, isInitCompleted, pin, isAuthorized];
 }

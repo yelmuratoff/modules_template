@@ -34,7 +34,8 @@ class SmsVerificationBody extends StatelessWidget {
                 opacity: 0,
                 child: TextField(
                   showCursor: false,
-                  maxLength: context.read<SmsVerificationVmodel>().correctCode?.length,
+                  maxLength:
+                      context.read<SmsVerificationVmodel>().correctCode?.length,
                   inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                   autofocus: true,
                   decoration: const InputDecoration.collapsed(hintText: ''),

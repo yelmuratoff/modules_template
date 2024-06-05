@@ -10,7 +10,10 @@ import '../domain/value_objects/app_locale.dart';
 import '../l10n_helper.dart';
 import 'utils/locale_name.dart';
 
-Future<AppLocale?> showLangSheet(BuildContext context, AppLocale currentLocale) async {
+Future<AppLocale?> showLangSheet(
+  BuildContext context,
+  AppLocale currentLocale,
+) async {
   return showModalBottomSheet<AppLocale?>(
     context: context,
     backgroundColor: context.color.background,
@@ -50,7 +53,8 @@ Future<AppLocale?> showLangSheet(BuildContext context, AppLocale currentLocale) 
               shrinkWrap: true,
               itemCount: appDi.core.get<LocaleEntity>().supportedLocales.length,
               itemBuilder: (context, index) {
-                final item = appDi.core.get<LocaleEntity>().supportedLocales[index];
+                final item =
+                    appDi.core.get<LocaleEntity>().supportedLocales[index];
                 return InkWell(
                   onTap: () {
                     Navigator.of(context).pop(item);

@@ -31,16 +31,19 @@ class SignUpButton extends StatelessWidget {
           child: MultiValueListenableBuilder<bool?>(
             valueListenables: listenables,
             builder: (context, values, _) {
-              final isValid = values.isNotEmpty && values.every((item) => item == true);
+              final isValid =
+                  values.isNotEmpty && values.every((item) => item == true);
               return ElevatedButton(
                 style: context.button.elevated1,
                 onPressed: isValid
                     ? () {
-                        ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
+                        ScaffoldMessenger.of(context)
+                            .hideCurrentMaterialBanner();
                         FocusScope.of(context).unfocus();
                         resetErrors();
                         final bloc = context.read<EmailSignUpEntity>();
-                        final timeout = bloc.state.timeout?.remainingSeconds ?? 0;
+                        final timeout =
+                            bloc.state.timeout?.remainingSeconds ?? 0;
                         if (timeout > 0) {
                           showCodeConfirmation(
                             (bloc.state as SignUpUnauthorized).resp!,

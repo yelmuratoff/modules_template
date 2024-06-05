@@ -29,7 +29,8 @@ class ProductDetailsScreen extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: MediaQuery.of(context).size.width / 3,
-                backgroundImage: CachedNetworkImageProvider(data.item.thumbnail ?? ''),
+                backgroundImage:
+                    CachedNetworkImageProvider(data.item.thumbnail ?? ''),
               ),
               const SizedBox(height: 16),
               Text(data.item.title ?? context.s.noData),

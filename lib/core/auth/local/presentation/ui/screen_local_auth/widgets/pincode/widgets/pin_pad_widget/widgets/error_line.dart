@@ -27,7 +27,8 @@ class ErrorLine extends StatelessWidget {
                     sizeFactor: animation,
                     child: child,
                   ),
-                  layoutBuilder: (Widget? currentChild, List<Widget> previousChildren) {
+                  layoutBuilder:
+                      (Widget? currentChild, List<Widget> previousChildren) {
                     return Column(
                       children: <Widget>[
                         if (currentChild != null) currentChild,

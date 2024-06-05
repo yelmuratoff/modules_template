@@ -72,7 +72,8 @@ class _QuantifierButtonState extends State<QuantifierButton> {
           child: Ink(
             padding: const EdgeInsets.all(5),
             decoration: BoxDecoration(
-              color: widget.enabled ? context.color.accent : context.color.grey300,
+              color:
+                  widget.enabled ? context.color.accent : context.color.grey300,
               borderRadius: BorderRadius.circular(5),
             ),
             child: IconTheme(

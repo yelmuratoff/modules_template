@@ -44,7 +44,8 @@ class AuthException extends AppException with EquatableMixin {
 
   List<String>? get password => _getErrorsList(errors?['password']);
 
-  List<String>? get cPassword => _getErrorsList(errors?['password_confirmation']);
+  List<String>? get cPassword =>
+      _getErrorsList(errors?['password_confirmation']);
 
   List<String>? get code => _getErrorsList(errors?['code']);
 

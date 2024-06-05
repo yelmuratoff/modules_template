@@ -154,7 +154,8 @@ class _PhoneTabState extends State<PhoneTab> with PhoneSignUpMixin {
                       message: state.error.toErrorMessage(),
                     );
                 }
-              } else if (state is SignUpUnauthorized && state.resp?.timeout != null) {
+              } else if (state is SignUpUnauthorized &&
+                  state.resp?.timeout != null) {
                 showCodeConfirmation(
                   context,
                   state.resp!,

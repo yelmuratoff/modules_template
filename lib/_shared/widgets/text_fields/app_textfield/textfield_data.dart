@@ -45,7 +45,8 @@ class AppTextfieldData {
   final List<String> Function(String)? validator;
   final void Function(String value)? onUserInput;
   final void Function(String value)? onChanged;
-  final void Function(BuildContext context, TextEditingController controller)? onTap;
+  final void Function(BuildContext context, TextEditingController controller)?
+      onTap;
   final void Function(String)? onSubmit;
   final void Function(String)? onFocusLost;
   final Widget Function(Color? color)? prefixIcon;

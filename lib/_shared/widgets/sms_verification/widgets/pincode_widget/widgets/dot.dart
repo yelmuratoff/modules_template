@@ -14,7 +14,8 @@ class PincodeDot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var color = (isInvalid ?? false) ? context.color.error : context.color.textPrimary;
+    var color =
+        (isInvalid ?? false) ? context.color.error : context.color.textPrimary;
     if (value == null) {
       color = context.color.grey900;
     }
